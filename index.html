@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Family Meal Plan — Week 2 🍽️</title>
+<title>Family Meal Plan — Week 3 🍽️</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lora:wght@500;600&family=Source+Sans+3:wght@400;500;600&display=swap');
   :root {
@@ -33,8 +33,6 @@
   #tab-snacks:checked~.section-snacks{display:block;}
   #tab-shopping:checked~.section-shopping{display:block;}
   #tab-tips:checked~.section-tips{display:block;}
-  .badge{display:inline-block;font-size:10px;font-weight:600;padding:2px 7px;border-radius:20px;vertical-align:middle;margin-left:5px;}
-  .badge-sc{background:var(--green-light);color:var(--green);}
   .kids-header{text-align:center;padding:1rem 0 1.5rem;}
   .kids-header-title{font-family:'Nunito',sans-serif;font-size:1.6rem;font-weight:900;background:linear-gradient(135deg,var(--k-orange),var(--k-purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
   .kids-header-sub{font-family:'Nunito',sans-serif;font-size:13px;color:var(--ink-light);margin-top:2px;}
@@ -47,6 +45,7 @@
   #day-3:checked~.section-meals .day-bar label[for="day-3"]{background:var(--k-green);color:white;border-color:var(--k-green);}
   #day-4:checked~.section-meals .day-bar label[for="day-4"]{background:var(--k-yellow);color:#333;border-color:var(--k-yellow);}
   #day-5:checked~.section-meals .day-bar label[for="day-5"]{background:var(--k-pink);color:#333;border-color:var(--k-pink);}
+  #day-6:checked~.section-meals .day-bar label[for="day-6"]{background:var(--k-red);color:white;border-color:var(--k-red);}
   .day-panel{display:none;}
   #day-0:checked~.section-meals .day-panel[data-panel="0"]{display:block;}
   #day-1:checked~.section-meals .day-panel[data-panel="1"]{display:block;}
@@ -54,9 +53,11 @@
   #day-3:checked~.section-meals .day-panel[data-panel="3"]{display:block;}
   #day-4:checked~.section-meals .day-panel[data-panel="4"]{display:block;}
   #day-5:checked~.section-meals .day-panel[data-panel="5"]{display:block;}
+  #day-6:checked~.section-meals .day-panel[data-panel="6"]{display:block;}
   .day-title-row{display:flex;align-items:center;gap:10px;margin-bottom:1rem;}
   .day-big-title{font-family:'Nunito',sans-serif;font-size:1.5rem;font-weight:900;color:var(--ink);}
   .easy-badge{font-family:'Nunito',sans-serif;font-size:11px;font-weight:800;padding:3px 10px;border-radius:20px;background:#FFF0E6;color:var(--k-orange);}
+  .sc-badge{font-family:'Nunito',sans-serif;font-size:11px;font-weight:800;padding:3px 10px;border-radius:20px;background:var(--green-light);color:var(--green);}
   .meal-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
   @media(max-width:600px){.meal-cards-grid{grid-template-columns:1fr;}}
   .meal-card{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.07);position:relative;}
@@ -140,14 +141,15 @@
 <div class="page">
 
 <div class="header">
-  <div class="header-eyebrow">Family of 4 · Inverell NSW · Week 2</div>
+  <div class="header-eyebrow">Family of 4 · Inverell NSW · Week 3</div>
   <h1>Weekly Meal Plan</h1>
-  <div class="header-sub">2 adults · 2 kids (ages 3 &amp; 6) · Monjaro-friendly · Tue–Sun</div>
+  <div class="header-sub">2 adults · 2 kids (ages 3 &amp; 6) · Monjaro-friendly · Mon–Sun</div>
   <div class="tags">
     <span class="tag">Coles &amp; Woolworths</span>
-    <span class="tag">Using what we have</span>
-    <span class="tag">Thermos lunches</span>
+    <span class="tag">Pork mince &amp; lamb</span>
+    <span class="tag">2× slow cooker</span>
     <span class="tag">Budget-friendly</span>
+    <span class="tag">Frozen veg</span>
   </div>
 </div>
 
@@ -162,6 +164,7 @@
 <input type="radio" class="day-radio" name="days" id="day-3">
 <input type="radio" class="day-radio" name="days" id="day-4">
 <input type="radio" class="day-radio" name="days" id="day-5">
+<input type="radio" class="day-radio" name="days" id="day-6">
 
 <div class="tab-bar">
   <label class="tab-label" for="tab-meals">Meals</label>
@@ -178,485 +181,57 @@
     <div class="kids-header-sub">Tap a day to see all the meals!</div>
   </div>
   <div class="day-bar">
-    <label class="day-label" for="day-0">Tue 🟠</label>
-    <label class="day-label" for="day-1">Wed 🟣</label>
-    <label class="day-label" for="day-2">Thu 🔵</label>
-    <label class="day-label" for="day-3">Fri 🟢</label>
-    <label class="day-label" for="day-4">Sat 🟡</label>
-    <label class="day-label" for="day-5">Sun 🩷</label>
+    <label class="day-label" for="day-0">Mon 🟠</label>
+    <label class="day-label" for="day-1">Tue 🟣</label>
+    <label class="day-label" for="day-2">Wed 🔵</label>
+    <label class="day-label" for="day-3">Thu 🟢</label>
+    <label class="day-label" for="day-4">Fri 🟡</label>
+    <label class="day-label" for="day-5">Sat 🩷</label>
+    <label class="day-label" for="day-6">Sun ❤️</label>
   </div>
 
-  <!-- TUESDAY -->
+  <!-- MONDAY -->
   <div class="day-panel" data-panel="0">
-    <div class="day-title-row"><div class="day-big-title">Tuesday</div></div>
+    <div class="day-title-row"><div class="day-big-title">Monday</div></div>
     <div class="day-summary">
-      <div class="day-summary-item"><span class="day-summary-type dst-b">Breakfast</span><span class="day-summary-emoji">🧀</span><span class="day-summary-name">Mini Cheese Omelette</span></div>
-      <div class="day-summary-item"><span class="day-summary-type dst-l">Lunch</span><span class="day-summary-emoji">🐟</span><span class="day-summary-name">Tuna &amp; Penne 🌡️</span></div>
-      <div class="day-summary-item"><span class="day-summary-type dst-d">Dinner</span><span class="day-summary-emoji">🐠</span><span class="day-summary-name">Garlic Butter Basa &amp; Mash</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-b">Breakfast</span><span class="day-summary-emoji">🍳</span><span class="day-summary-name">Scrambled Eggs on Toast</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-l">Lunch</span><span class="day-summary-emoji">🧀</span><span class="day-summary-name">Toasted Cheese Sandwich</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-d">Dinner</span><span class="day-summary-emoji">🍜</span><span class="day-summary-name">Pork Mince Stir Fry Noodles</span></div>
     </div>
     <div class="meal-cards-grid">
-      <!-- BREAKFAST -->
       <div class="meal-card">
         <div class="meal-card-art art-breakfast">
           <span class="meal-type-ribbon ribbon-breakfast">Breakfast</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <rect x="28" y="68" width="120" height="8" rx="4" fill="#888"/>
-            <rect x="163" y="66" width="28" height="6" rx="3" fill="#777"/>
-            <ellipse cx="88" cy="68" rx="58" ry="22" fill="#FFE066"/>
-            <ellipse cx="88" cy="66" rx="52" ry="18" fill="#FFF3B0"/>
-            <ellipse cx="73" cy="63" rx="10" ry="6" fill="#FFD166" opacity=".9"/>
-            <ellipse cx="98" cy="61" rx="11" ry="6" fill="#FFD166" opacity=".9"/>
-            <ellipse cx="116" cy="65" rx="9" ry="5" fill="#FFD166" opacity=".9"/>
-            <path d="M43 66 Q88 60 133 66" stroke="#e8c050" stroke-width="2" fill="none" opacity=".6" stroke-linecap="round"/>
-            <path d="M68 44 Q70 36 68 28" stroke="#ddd" stroke-width="2" fill="none" stroke-linecap="round" opacity=".6"/>
-            <path d="M88 42 Q90 34 88 26" stroke="#ddd" stroke-width="2" fill="none" stroke-linecap="round" opacity=".6"/>
-            <path d="M108 44 Q110 36 108 28" stroke="#ddd" stroke-width="2" fill="none" stroke-linecap="round" opacity=".6"/>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">Mini Cheese Omelette</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-b">🥚 Eggs</span><span class="chip chip-b">🧀 Cheese</span><span class="chip chip-b">🧈 Butter</span>
-          </div>
-        </div>
-      </div>
-      <!-- LUNCH -->
-      <div class="meal-card">
-        <div class="meal-card-art art-lunch">
-          <span class="meal-type-ribbon ribbon-lunch">Lunch</span>
-          <span class="thermos-tag">🌡️</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <path d="M30 82 Q100 118 170 82" fill="#f0f6ff"/>
-            <ellipse cx="100" cy="82" rx="70" ry="18" fill="#f5f8ff"/>
-            <rect x="52" y="68" width="20" height="9" rx="4.5" fill="#f0d090" transform="rotate(-15 62 72)"/>
-            <rect x="76" y="65" width="20" height="9" rx="4.5" fill="#e8c878" transform="rotate(8 86 70)"/>
-            <rect x="102" y="67" width="20" height="9" rx="4.5" fill="#f0d090" transform="rotate(-10 112 72)"/>
-            <rect x="126" y="65" width="18" height="9" rx="4.5" fill="#e8c878" transform="rotate(18 135 70)"/>
-            <rect x="60" y="80" width="18" height="9" rx="4.5" fill="#e8c878" transform="rotate(10 69 84)"/>
-            <rect x="118" y="78" width="20" height="9" rx="4.5" fill="#f0d090" transform="rotate(-8 128 82)"/>
-            <path d="M86 73 Q94 69 98 75" stroke="#8ca0c8" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <path d="M108 76 Q116 72 120 78" stroke="#8ca0c8" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <path d="M82 68 Q100 62 118 68" stroke="#FFD166" stroke-width="2.5" fill="none" opacity=".8" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">Tuna &amp; Penne with Cheese 🌡️</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-l">🐟 Tuna</span><span class="chip chip-l">🍝 Penne</span><span class="chip chip-l">🧀 Cheese</span><span class="chip chip-l">🧈 Butter</span>
-          </div>
-        </div>
-      </div>
-      <!-- DINNER -->
-      <div class="meal-card">
-        <div class="meal-card-art art-dinner">
-          <span class="meal-type-ribbon ribbon-dinner">Dinner</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="100" cy="100" rx="68" ry="18" fill="#e0e0e0" opacity=".4"/>
-            <ellipse cx="100" cy="95" rx="65" ry="17" fill="#f5f5f5"/>
-            <ellipse cx="72" cy="88" rx="30" ry="18" fill="#fffbf0"/>
-            <ellipse cx="72" cy="82" rx="26" ry="14" fill="white"/>
-            <rect x="62" y="76" width="18" height="8" rx="3" fill="#FFD166" opacity=".8"/>
-            <path d="M108 70 Q130 58 148 66 Q152 80 138 88 Q120 94 105 86 Z" fill="#f5e8d0"/>
-            <path d="M112 73 Q132 63 146 70 Q149 80 137 86 Q120 90 108 84 Z" fill="white" opacity=".7"/>
-            <path d="M108 82 Q125 76 145 80" stroke="#FFD166" stroke-width="2.5" fill="none" opacity=".8" stroke-linecap="round"/>
-            <circle cx="158" cy="85" r="5" fill="#52B788"/>
-            <circle cx="163" cy="78" r="4" fill="#F4845F"/>
-            <circle cx="160" cy="92" r="4" fill="#52B788"/>
-            <ellipse cx="167" cy="88" rx="4" ry="3" fill="#FFD166"/>
-            <circle cx="130" cy="65" r="8" fill="#FFE066" stroke="#c8a030" stroke-width="1.2"/>
-            <line x1="122" y1="65" x2="138" y2="65" stroke="#c8a030" stroke-width="1"/>
-            <line x1="130" y1="57" x2="130" y2="73" stroke="#c8a030" stroke-width="1"/>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">Garlic Butter Basa with Mash &amp; Veg 🐠</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-d">🐠 Basa</span><span class="chip chip-d">🥔 Mash</span><span class="chip chip-d">🧈 Garlic butter</span><span class="chip chip-d">🥦 Mixed veg</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- WEDNESDAY -->
-  <div class="day-panel" data-panel="1">
-    <div class="day-title-row"><div class="day-big-title">Wednesday</div></div>
-    <div class="day-summary">
-      <div class="day-summary-item"><span class="day-summary-type dst-b">Breakfast</span><span class="day-summary-emoji">🍞</span><span class="day-summary-name">French Toast &amp; Cinnamon Sugar ✨</span></div>
-      <div class="day-summary-item"><span class="day-summary-type dst-l">Lunch</span><span class="day-summary-emoji">🐠</span><span class="day-summary-name">Basa &amp; Buttered Noodles 🌡️</span></div>
-      <div class="day-summary-item"><span class="day-summary-type dst-d">Dinner</span><span class="day-summary-emoji">🦐</span><span class="day-summary-name">Creamy Marinara Pasta</span></div>
-    </div>
-    <div class="meal-cards-grid">
-      <!-- BREAKFAST -->
-      <div class="meal-card">
-        <div class="meal-card-art art-breakfast">
-          <span class="meal-type-ribbon ribbon-breakfast">Breakfast</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <rect x="28" y="45" width="64" height="74" rx="10" fill="#c8782a"/>
-            <rect x="31" y="48" width="58" height="68" rx="8" fill="#e8922a"/>
-            <rect x="34" y="51" width="52" height="62" rx="7" fill="#FFD166" opacity=".7"/>
-            <ellipse cx="45" cy="62" rx="4" ry="2" fill="#8B4513" opacity=".4"/>
-            <ellipse cx="62" cy="58" rx="3" ry="1.5" fill="#8B4513" opacity=".4"/>
-            <ellipse cx="77" cy="64" rx="3" ry="2" fill="#8B4513" opacity=".3"/>
-            <ellipse cx="54" cy="72" rx="4" ry="2" fill="#8B4513" opacity=".3"/>
-            <rect x="108" y="45" width="64" height="74" rx="10" fill="#c8782a"/>
-            <rect x="111" y="48" width="58" height="68" rx="8" fill="#e8922a"/>
-            <rect x="114" y="51" width="52" height="62" rx="7" fill="#FFD166" opacity=".7"/>
-            <ellipse cx="125" cy="60" rx="4" ry="2" fill="#8B4513" opacity=".4"/>
-            <ellipse cx="142" cy="65" rx="3" ry="2" fill="#8B4513" opacity=".4"/>
-            <ellipse cx="158" cy="58" rx="3" ry="1.5" fill="#8B4513" opacity=".4"/>
-            <ellipse cx="133" cy="75" rx="4" ry="2" fill="#8B4513" opacity=".3"/>
-            <text x="50" y="95" font-size="10" fill="#FFD166" opacity=".9">✦</text>
-            <text x="128" y="93" font-size="10" fill="#FFD166" opacity=".9">✦</text>
-            <text x="88" y="100" font-size="8" fill="#FFD166" opacity=".6">✦</text>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">French Toast with Cinnamon Sugar ✨</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-b">🍞 Bread</span><span class="chip chip-b">🥚 Egg</span><span class="chip chip-b">🥛 Milk</span><span class="chip chip-b">🍯 Cinnamon sugar</span>
-          </div>
-        </div>
-      </div>
-      <!-- LUNCH -->
-      <div class="meal-card">
-        <div class="meal-card-art art-lunch">
-          <span class="meal-type-ribbon ribbon-lunch">Lunch</span>
-          <span class="thermos-tag">🌡️</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <path d="M30 82 Q100 118 170 82" fill="#f0f0f8"/>
-            <ellipse cx="100" cy="82" rx="70" ry="18" fill="#f8f8ff"/>
-            <path d="M42 76 Q62 62 82 76 Q102 90 122 76 Q142 62 162 76" stroke="#f0d090" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <path d="M38 86 Q58 72 78 86 Q98 100 118 86 Q138 72 155 86" stroke="#e8c878" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <path d="M85 72 Q95 67 102 73" stroke="#f5e8d0" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <path d="M108 75 Q118 70 124 76" stroke="#ede0c8" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <path d="M80 82 Q100 76 120 82" stroke="#FFD166" stroke-width="2" fill="none" opacity=".6" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">Leftover Basa &amp; Buttered Noodles 🌡️</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-l">🐠 Basa</span><span class="chip chip-l">🍜 Noodles</span><span class="chip chip-l">🧈 Butter</span><span class="chip chip-l">🫙 Soy sauce</span>
-          </div>
-        </div>
-      </div>
-      <!-- DINNER -->
-      <div class="meal-card">
-        <div class="meal-card-art art-dinner">
-          <span class="meal-type-ribbon ribbon-dinner">Dinner</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <path d="M30 82 Q100 118 170 82" fill="#fef0e8"/>
-            <ellipse cx="100" cy="82" rx="70" ry="18" fill="#fff5f0"/>
-            <path d="M45 76 Q70 64 95 76 Q120 88 145 76" stroke="#f0d090" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-            <path d="M40 84 Q65 72 90 84 Q115 96 140 84 Q158 74 166 84" stroke="#e8c878" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <path d="M48 92 Q73 80 98 92 Q123 104 148 92" stroke="#f0d090" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-            <path d="M72 70 Q76 62 84 64 Q90 66 88 74" stroke="#e8784a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-            <path d="M100 66 Q108 60 116 66 Q114 76 106 76 Z" fill="#7a5a8a"/>
-            <ellipse cx="132" cy="72" rx="9" ry="6" fill="none" stroke="#f5e8d0" stroke-width="3"/>
-            <ellipse cx="100" cy="80" rx="50" ry="10" fill="#e05020" opacity=".15"/>
-            <circle cx="95" cy="67" r="3" fill="#52B788"/>
-            <circle cx="115" cy="65" r="2.5" fill="#52B788"/>
-            <path d="M70 78 Q100 72 130 78" stroke="white" stroke-width="2" fill="none" opacity=".5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">Creamy Garlic Marinara Pasta 🦐</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-d">🦐 Marinara mix</span><span class="chip chip-d">🍝 Penne</span><span class="chip chip-d">🍅 Tomato</span><span class="chip chip-d">🥛 Cream</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- THURSDAY -->
-  <div class="day-panel" data-panel="2">
-    <div class="day-title-row"><div class="day-big-title">Thursday</div><span class="easy-badge">⚡ Easy Night</span></div>
-    <div class="day-summary">
-      <div class="day-summary-item"><span class="day-summary-type dst-b">Breakfast</span><span class="day-summary-emoji">🫘</span><span class="day-summary-name">Baked Beans on Toast</span></div>
-      <div class="day-summary-item"><span class="day-summary-type dst-l">Lunch</span><span class="day-summary-emoji">🦐</span><span class="day-summary-name">Leftover Marinara Pasta 🌡️</span></div>
-      <div class="day-summary-item"><span class="day-summary-type dst-d">Dinner</span><span class="day-summary-emoji">🍝</span><span class="day-summary-name">Tortellini in Creamy Tomato</span></div>
-    </div>
-    <div class="meal-cards-grid">
-      <!-- BREAKFAST -->
-      <div class="meal-card">
-        <div class="meal-card-art art-breakfast">
-          <span class="meal-type-ribbon ribbon-breakfast">Breakfast</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <rect x="55" y="42" width="90" height="82" rx="10" fill="#b87c2a"/>
-            <rect x="58" y="45" width="84" height="76" rx="8" fill="#e8a840"/>
-            <rect x="61" y="48" width="78" height="66" rx="7" fill="#d06820"/>
-            <ellipse cx="78" cy="63" rx="7" ry="4.5" fill="#f08040"/>
-            <ellipse cx="100" cy="60" rx="7" ry="4.5" fill="#e87030"/>
-            <ellipse cx="122" cy="63" rx="7" ry="4.5" fill="#f08040"/>
-            <ellipse cx="85" cy="75" rx="7" ry="4.5" fill="#e87030"/>
-            <ellipse cx="110" cy="75" rx="7" ry="4.5" fill="#f08040"/>
-            <ellipse cx="78" cy="86" rx="7" ry="4.5" fill="#f08040"/>
-            <ellipse cx="100" cy="86" rx="7" ry="4.5" fill="#e87030"/>
-            <ellipse cx="122" cy="86" rx="7" ry="4.5" fill="#f08040"/>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">Baked Beans on Toast</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-b">🫘 Baked beans</span><span class="chip chip-b">🍞 Toast</span>
-          </div>
-        </div>
-      </div>
-      <!-- LUNCH -->
-      <div class="meal-card">
-        <div class="meal-card-art art-lunch">
-          <span class="meal-type-ribbon ribbon-lunch">Lunch</span>
-          <span class="thermos-tag">🌡️</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <path d="M30 82 Q100 118 170 82" fill="#fef0e8"/>
-            <ellipse cx="100" cy="82" rx="70" ry="18" fill="#fff5f0"/>
-            <path d="M45 76 Q70 64 95 76 Q120 88 145 76" stroke="#f0d090" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-            <path d="M40 84 Q65 72 90 84 Q115 96 140 84" stroke="#e8c878" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <path d="M72 70 Q76 62 84 64 Q90 66 88 74" stroke="#e8784a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-            <ellipse cx="100" cy="78" rx="40" ry="8" fill="#e05020" opacity=".12"/>
-            <path d="M72 78 Q100 72 128 78" stroke="white" stroke-width="2" fill="none" opacity=".5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">Leftover Marinara Pasta 🌡️</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-l">🦐 Marinara mix</span><span class="chip chip-l">🍝 Pasta</span><span class="chip chip-l">🍅 Sauce</span>
-          </div>
-        </div>
-      </div>
-      <!-- DINNER -->
-      <div class="meal-card">
-        <div class="meal-card-art art-dinner">
-          <span class="meal-type-ribbon ribbon-dinner">Dinner</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <path d="M30 82 Q100 118 170 82" fill="#fff0f8"/>
-            <ellipse cx="100" cy="82" rx="70" ry="18" fill="#fff5fa"/>
-            <!-- tortellini hat shapes -->
-            <path d="M55 72 Q62 62 70 72 Q63 80 55 72 Z" fill="#f0d090" stroke="#d4b060" stroke-width="1"/>
-            <path d="M78 68 Q85 58 93 68 Q86 76 78 68 Z" fill="#e8c878" stroke="#c8a050" stroke-width="1"/>
-            <path d="M104 70 Q111 60 119 70 Q112 78 104 70 Z" fill="#f0d090" stroke="#d4b060" stroke-width="1"/>
-            <path d="M128 67 Q135 57 143 67 Q136 75 128 67 Z" fill="#e8c878" stroke="#c8a050" stroke-width="1"/>
-            <path d="M63 84 Q70 74 78 84 Q71 92 63 84 Z" fill="#f0d090" stroke="#d4b060" stroke-width="1"/>
-            <path d="M118 82 Q125 72 133 82 Q126 90 118 82 Z" fill="#e8c878" stroke="#c8a050" stroke-width="1"/>
-            <ellipse cx="100" cy="82" rx="55" ry="12" fill="#e05020" opacity=".1"/>
-            <path d="M75 78 Q100 72 125 78" stroke="white" stroke-width="2.5" fill="none" opacity=".7" stroke-linecap="round"/>
-            <path d="M82 70 Q100 64 118 70" stroke="#FFD166" stroke-width="2" fill="none" opacity=".6" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">Tortellini in Creamy Tomato Sauce 🍝</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-d">🍝 Tortellini</span><span class="chip chip-d">🍅 Tomato</span><span class="chip chip-d">🥛 Cream</span><span class="chip chip-d">🧀 Cheese</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- FRIDAY -->
-  <div class="day-panel" data-panel="3">
-    <div class="day-title-row"><div class="day-big-title">Friday</div></div>
-    <div class="day-summary">
-      <div class="day-summary-item"><span class="day-summary-type dst-b">Breakfast</span><span class="day-summary-emoji">🥚</span><span class="day-summary-name">Boiled Eggs &amp; Toast Soldiers</span></div>
-      <div class="day-summary-item"><span class="day-summary-type dst-l">Lunch</span><span class="day-summary-emoji">🍝</span><span class="day-summary-name">Leftover Tortellini 🌡️</span></div>
-      <div class="day-summary-item"><span class="day-summary-type dst-d">Dinner</span><span class="day-summary-emoji">🥩</span><span class="day-summary-name">Scotch Steaks, Mash &amp; Veg</span></div>
-    </div>
-    <div class="meal-cards-grid">
-      <!-- BREAKFAST -->
-      <div class="meal-card">
-        <div class="meal-card-art art-breakfast">
-          <span class="meal-type-ribbon ribbon-breakfast">Breakfast</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <path d="M60 90 Q80 110 100 90" fill="#d4aa70"/>
-            <rect x="68" y="82" width="24" height="10" rx="3" fill="#c8a060"/>
-            <ellipse cx="80" cy="78" rx="18" ry="22" fill="white" stroke="#e8e0d0" stroke-width="1.5"/>
-            <ellipse cx="80" cy="72" rx="14" ry="16" fill="#fffbf5"/>
-            <ellipse cx="80" cy="62" rx="10" ry="8" fill="#FFD166"/>
-            <ellipse cx="77" cy="60" rx="4" ry="3" fill="#FFE8A0" opacity=".8"/>
-            <path d="M80 70 Q82 76 80 82" stroke="#FFD166" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/>
-            <rect x="112" y="55" width="14" height="60" rx="4" fill="#c8a060"/>
-            <rect x="114" y="57" width="10" height="56" rx="3" fill="#e8a840"/>
-            <rect x="130" y="55" width="14" height="60" rx="4" fill="#c8a060"/>
-            <rect x="132" y="57" width="10" height="56" rx="3" fill="#e8a840"/>
-            <rect x="148" y="55" width="14" height="60" rx="4" fill="#c8a060"/>
-            <rect x="150" y="57" width="10" height="56" rx="3" fill="#e8a840"/>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">Boiled Eggs &amp; Toast Soldiers 🥚</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-b">🥚 Eggs</span><span class="chip chip-b">🍞 Toast</span><span class="chip chip-b">🧈 Butter</span>
-          </div>
-        </div>
-      </div>
-      <!-- LUNCH -->
-      <div class="meal-card">
-        <div class="meal-card-art art-lunch">
-          <span class="meal-type-ribbon ribbon-lunch">Lunch</span>
-          <span class="thermos-tag">🌡️</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <path d="M30 82 Q100 118 170 82" fill="#fff0f8"/>
-            <ellipse cx="100" cy="82" rx="70" ry="18" fill="#fff5fa"/>
-            <path d="M55 72 Q62 62 70 72 Q63 80 55 72 Z" fill="#f0d090" stroke="#d4b060" stroke-width="1"/>
-            <path d="M78 68 Q85 58 93 68 Q86 76 78 68 Z" fill="#e8c878" stroke="#c8a050" stroke-width="1"/>
-            <path d="M104 70 Q111 60 119 70 Q112 78 104 70 Z" fill="#f0d090" stroke="#d4b060" stroke-width="1"/>
-            <path d="M128 67 Q135 57 143 67 Q136 75 128 67 Z" fill="#e8c878" stroke="#c8a050" stroke-width="1"/>
-            <path d="M63 84 Q70 74 78 84 Q71 92 63 84 Z" fill="#f0d090" stroke="#d4b060" stroke-width="1"/>
-            <ellipse cx="100" cy="82" rx="50" ry="10" fill="#e05020" opacity=".1"/>
-            <path d="M75 78 Q100 72 125 78" stroke="white" stroke-width="2.5" fill="none" opacity=".7" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">Leftover Tortellini 🌡️</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-l">🍝 Tortellini</span><span class="chip chip-l">🍅 Tomato sauce</span><span class="chip chip-l">🧀 Cheese</span>
-          </div>
-        </div>
-      </div>
-      <!-- DINNER -->
-      <div class="meal-card">
-        <div class="meal-card-art art-dinner">
-          <span class="meal-type-ribbon ribbon-dinner">Dinner</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="100" cy="100" rx="70" ry="18" fill="#e0e0e0" opacity=".4"/>
-            <ellipse cx="100" cy="95" rx="67" ry="17" fill="#f5f5f5"/>
-            <ellipse cx="68" cy="88" rx="28" ry="16" fill="#fffbf0"/>
-            <ellipse cx="68" cy="82" rx="24" ry="12" fill="white"/>
-            <path d="M102 65 Q130 55 152 65 Q158 82 148 92 Q128 100 105 92 Q98 80 102 65 Z" fill="#8B3A1A"/>
-            <path d="M106 68 Q130 60 148 69 Q153 82 144 90 Q126 97 108 90 Q102 80 106 68 Z" fill="#a04020"/>
-            <path d="M112 72 Q130 67 146 72" stroke="#6b2810" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".7"/>
-            <path d="M110 80 Q128 75 144 80" stroke="#6b2810" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".7"/>
-            <ellipse cx="128" cy="70" rx="10" ry="5" fill="#FFD166" opacity=".8"/>
-            <circle cx="163" cy="82" r="5" fill="#52B788"/>
-            <circle cx="158" cy="89" r="4.5" fill="#52B788"/>
-            <circle cx="168" cy="89" r="4" fill="#F4845F"/>
-            <ellipse cx="164" cy="95" rx="5" ry="3" fill="#FFD166"/>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">Pan Seared Scotch Steaks with Mash &amp; Veg 🥩</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-d">🥩 Scotch steak</span><span class="chip chip-d">🥔 Mash</span><span class="chip chip-d">🧈 Butter</span><span class="chip chip-d">🥦 Mixed veg</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SATURDAY -->
-  <div class="day-panel" data-panel="4">
-    <div class="day-title-row"><div class="day-big-title">Saturday</div></div>
-    <div class="day-summary">
-      <div class="day-summary-item"><span class="day-summary-type dst-b">Breakfast</span><span class="day-summary-emoji">🥞</span><span class="day-summary-name">Pikelet Stack</span></div>
-      <div class="day-summary-item"><span class="day-summary-type dst-l">Lunch</span><span class="day-summary-emoji">🥩</span><span class="day-summary-name">Steak &amp; Soy Noodles 🌡️</span></div>
-      <div class="day-summary-item"><span class="day-summary-type dst-d">Dinner</span><span class="day-summary-emoji">🐑</span><span class="day-summary-name">Soy Honey Lamb with Mash</span></div>
-    </div>
-    <div class="meal-cards-grid">
-      <!-- BREAKFAST -->
-      <div class="meal-card">
-        <div class="meal-card-art art-breakfast">
-          <span class="meal-type-ribbon ribbon-breakfast">Breakfast</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="100" cy="104" rx="46" ry="11" fill="#c8782a"/>
-            <ellipse cx="100" cy="100" rx="44" ry="10" fill="#e8922a"/>
-            <ellipse cx="100" cy="90" rx="42" ry="10" fill="#c8782a"/>
-            <ellipse cx="100" cy="86" rx="40" ry="9" fill="#e8922a"/>
-            <ellipse cx="100" cy="76" rx="38" ry="9" fill="#c8782a"/>
-            <ellipse cx="100" cy="72" rx="36" ry="8" fill="#e8922a"/>
-            <ellipse cx="100" cy="69" rx="34" ry="7" fill="#FFD166" opacity=".8"/>
-            <circle cx="88" cy="68" r="2.5" fill="#c8782a" opacity=".5"/>
-            <circle cx="100" cy="66" r="2" fill="#c8782a" opacity=".5"/>
-            <circle cx="112" cy="68" r="2.5" fill="#c8782a" opacity=".5"/>
-            <path d="M110 69 Q118 77 115 89" stroke="#c8602a" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".6"/>
-            <rect x="92" y="62" width="16" height="8" rx="3" fill="#FFE066" opacity=".9"/>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">Pikelet Stack with Butter &amp; Syrup 🥞</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-b">🥞 Pikelet mix</span><span class="chip chip-b">🧈 Butter</span><span class="chip chip-b">🍯 Maple syrup</span>
-          </div>
-        </div>
-      </div>
-      <!-- LUNCH -->
-      <div class="meal-card">
-        <div class="meal-card-art art-lunch">
-          <span class="meal-type-ribbon ribbon-lunch">Lunch</span>
-          <span class="thermos-tag">🌡️</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <path d="M30 82 Q100 118 170 82" fill="#f5f5ff"/>
-            <ellipse cx="100" cy="82" rx="70" ry="18" fill="#f8f8ff"/>
-            <path d="M42 76 Q62 62 82 76 Q102 90 122 76 Q142 62 158 76" stroke="#f0d090" stroke-width="4.5" fill="none" stroke-linecap="round"/>
-            <path d="M38 86 Q58 72 78 86 Q98 100 118 86 Q138 72 155 86" stroke="#e8c878" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <rect x="78" y="63" width="24" height="10" rx="4" fill="#a04020" transform="rotate(-5 90 68)"/>
-            <rect x="105" y="61" width="22" height="10" rx="4" fill="#8B3A1A" transform="rotate(5 116 66)"/>
-            <path d="M80 82 Q100 76 120 82" stroke="#5c3010" stroke-width="2" fill="none" opacity=".4" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">Leftover Steak &amp; Soy Noodles 🌡️</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-l">🥩 Steak</span><span class="chip chip-l">🍜 Noodles</span><span class="chip chip-l">🫙 Soy sauce</span>
-          </div>
-        </div>
-      </div>
-      <!-- DINNER -->
-      <div class="meal-card">
-        <div class="meal-card-art art-dinner">
-          <span class="meal-type-ribbon ribbon-dinner">Dinner</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="100" cy="100" rx="68" ry="18" fill="#e0e0e0" opacity=".4"/>
-            <ellipse cx="100" cy="95" rx="65" ry="17" fill="#f5f5f5"/>
-            <ellipse cx="68" cy="87" rx="28" ry="16" fill="#fffbf0"/>
-            <ellipse cx="68" cy="81" rx="24" ry="12" fill="white"/>
-            <rect x="60" y="75" width="16" height="7" rx="3" fill="#FFD166" opacity=".7"/>
-            <path d="M100 63 Q128 53 150 62 Q156 76 148 88 Q128 97 103 90 Q96 77 100 63 Z" fill="#9B4520"/>
-            <path d="M104 66 Q128 58 146 66 Q151 77 144 86 Q126 94 106 87 Q100 77 104 66 Z" fill="#b85530"/>
-            <path d="M108 70 Q128 64 144 70" stroke="#FFD166" stroke-width="3" fill="none" opacity=".8" stroke-linecap="round"/>
-            <path d="M106 78 Q126 72 142 78" stroke="#c8602a" stroke-width="2" fill="none" opacity=".5" stroke-linecap="round"/>
-            <rect x="148" y="65" width="6" height="28" rx="3" fill="#e8d0c0"/>
-            <ellipse cx="151" cy="64" rx="5" ry="4" fill="#f0ddd0"/>
-            <ellipse cx="151" cy="94" rx="5" ry="4" fill="#f0ddd0"/>
-            <line x1="158" y1="80" x2="175" y2="77" stroke="#52B788" stroke-width="3.5" stroke-linecap="round"/>
-            <line x1="158" y1="87" x2="174" y2="84" stroke="#52B788" stroke-width="3.5" stroke-linecap="round"/>
-            <line x1="158" y1="94" x2="173" y2="91" stroke="#52B788" stroke-width="3.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="meal-card-body">
-          <div class="meal-card-name">Soy Honey Garlic Lamb with Mash 🐑</div>
-          <div class="ingredient-chips">
-            <span class="chip chip-d">🐑 Lamb steaks</span><span class="chip chip-d">🍯 Honey &amp; soy</span><span class="chip chip-d">🥔 Mash</span><span class="chip chip-d">🫘 Green beans</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SUNDAY -->
-  <div class="day-panel" data-panel="5">
-    <div class="day-title-row"><div class="day-big-title">Sunday</div></div>
-    <div class="day-summary">
-      <div class="day-summary-item"><span class="day-summary-type dst-b">Breakfast</span><span class="day-summary-emoji">🥚</span><span class="day-summary-name">Scrambled Eggs on Toast</span></div>
-      <div class="day-summary-item"><span class="day-summary-type dst-l">Lunch</span><span class="day-summary-emoji">🐟</span><span class="day-summary-name">Crispy Tuna Patties</span></div>
-      <div class="day-summary-item"><span class="day-summary-type dst-d">Dinner</span><span class="day-summary-emoji">🍔</span><span class="day-summary-name">Smash Burger Night</span></div>
-    </div>
-    <div class="meal-cards-grid">
-      <!-- BREAKFAST -->
-      <div class="meal-card">
-        <div class="meal-card-art art-breakfast">
-          <span class="meal-type-ribbon ribbon-breakfast">Breakfast</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <rect x="30" y="50" width="65" height="75" rx="8" fill="#c8a060"/>
-            <rect x="33" y="53" width="59" height="69" rx="6" fill="#f5c878"/>
-            <ellipse cx="62" cy="75" rx="28" ry="20" fill="#FFE066" opacity=".9"/>
-            <ellipse cx="55" cy="72" rx="12" ry="9" fill="#FFF3B0"/>
-            <ellipse cx="72" cy="78" rx="11" ry="8" fill="#FFF3B0"/>
-            <rect x="105" y="55" width="65" height="75" rx="8" fill="#c8a060"/>
-            <rect x="108" y="58" width="59" height="69" rx="6" fill="#f5c878"/>
-            <ellipse cx="137" cy="80" rx="28" ry="20" fill="#FFE066" opacity=".9"/>
-            <ellipse cx="130" cy="77" rx="12" ry="9" fill="#FFF3B0"/>
-            <ellipse cx="147" cy="83" rx="11" ry="8" fill="#FFF3B0"/>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- Two slices of toast -->
+            <rect x="18" y="55" width="72" height="82" rx="9" fill="#b8731a"/>
+            <rect x="22" y="59" width="64" height="74" rx="7" fill="#d4891e"/>
+            <rect x="25" y="62" width="58" height="68" rx="6" fill="#f5c842" opacity=".6"/>
+            <!-- toast texture lines -->
+            <line x1="28" y1="75" x2="78" y2="75" stroke="#c8902a" stroke-width="1" opacity=".4"/>
+            <line x1="28" y1="88" x2="78" y2="88" stroke="#c8902a" stroke-width="1" opacity=".4"/>
+            <line x1="28" y1="101" x2="78" y2="101" stroke="#c8902a" stroke-width="1" opacity=".4"/>
+            <!-- second toast -->
+            <rect x="108" y="55" width="72" height="82" rx="9" fill="#b8731a"/>
+            <rect x="112" y="59" width="64" height="74" rx="7" fill="#d4891e"/>
+            <rect x="115" y="62" width="58" height="68" rx="6" fill="#f5c842" opacity=".6"/>
+            <line x1="118" y1="75" x2="168" y2="75" stroke="#c8902a" stroke-width="1" opacity=".4"/>
+            <line x1="118" y1="88" x2="168" y2="88" stroke="#c8902a" stroke-width="1" opacity=".4"/>
+            <line x1="118" y1="101" x2="168" y2="101" stroke="#c8902a" stroke-width="1" opacity=".4"/>
+            <!-- scrambled egg pile on left toast -->
+            <ellipse cx="54" cy="78" rx="26" ry="18" fill="#FFE066" opacity=".9"/>
+            <path d="M32 80 Q42 68 54 72 Q66 68 76 78 Q72 92 54 94 Q36 92 32 80Z" fill="#FFD030"/>
+            <ellipse cx="44" cy="76" rx="10" ry="7" fill="#FFF3A0" opacity=".8"/>
+            <ellipse cx="62" cy="78" rx="9" ry="6" fill="#FFF3A0" opacity=".7"/>
+            <ellipse cx="54" cy="86" rx="8" ry="5" fill="#FFE566" opacity=".8"/>
+            <!-- steam wisps -->
+            <path d="M44 50 Q46 42 44 34" stroke="#ddd" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".5"/>
+            <path d="M54 48 Q56 40 54 32" stroke="#ddd" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".5"/>
+            <path d="M64 50 Q66 42 64 34" stroke="#ddd" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".5"/>
+            <!-- pepper specks -->
+            <circle cx="46" cy="78" r="1.2" fill="#333" opacity=".5"/>
+            <circle cx="60" cy="74" r="1" fill="#333" opacity=".5"/>
+            <circle cx="58" cy="84" r="1.2" fill="#333" opacity=".5"/>
           </svg>
         </div>
         <div class="meal-card-body">
@@ -666,63 +241,908 @@
           </div>
         </div>
       </div>
-      <!-- LUNCH -->
+
       <div class="meal-card">
         <div class="meal-card-art art-lunch">
           <span class="meal-type-ribbon ribbon-lunch">Lunch</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="100" cy="108" rx="68" ry="16" fill="#ccc" opacity=".3"/>
-            <ellipse cx="100" cy="103" rx="65" ry="15" fill="#f5f5f5"/>
-            <ellipse cx="72" cy="93" rx="28" ry="14" fill="#c8782a" opacity=".4"/>
-            <ellipse cx="72" cy="89" rx="27" ry="13" fill="#c8782a"/>
-            <ellipse cx="72" cy="86" rx="25" ry="11" fill="#e8922a"/>
-            <ellipse cx="72" cy="83" rx="22" ry="9" fill="#FFD166" opacity=".7"/>
-            <path d="M55 82 Q72 78 89 82" stroke="#c8782a" stroke-width="1.5" fill="none" opacity=".5" stroke-linecap="round"/>
-            <ellipse cx="128" cy="93" rx="28" ry="14" fill="#c8782a" opacity=".4"/>
-            <ellipse cx="128" cy="89" rx="27" ry="13" fill="#c8782a"/>
-            <ellipse cx="128" cy="86" rx="25" ry="11" fill="#e8922a"/>
-            <ellipse cx="128" cy="83" rx="22" ry="9" fill="#FFD166" opacity=".7"/>
-            <path d="M111 82 Q128 78 145 82" stroke="#c8782a" stroke-width="1.5" fill="none" opacity=".5" stroke-linecap="round"/>
-            <circle cx="98" cy="100" r="4" fill="#52B788"/>
-            <circle cx="104" cy="95" r="3.5" fill="#F4845F"/>
-            <ellipse cx="100" cy="107" rx="4" ry="3" fill="#FFD166"/>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- toasted sandwich top view / side angle -->
+            <!-- shadow -->
+            <ellipse cx="100" cy="128" rx="68" ry="10" fill="#ccc" opacity=".3"/>
+            <!-- bottom bread -->
+            <rect x="28" y="90" width="144" height="32" rx="6" fill="#b8731a"/>
+            <rect x="31" y="93" width="138" height="26" rx="5" fill="#d4891e"/>
+            <!-- melted cheese oozing -->
+            <rect x="35" y="85" width="130" height="12" rx="4" fill="#FFD166"/>
+            <path d="M50 97 Q55 106 50 97" fill="#FFD166"/>
+            <path d="M80 97 Q86 108 80 97" fill="#FFD166"/>
+            <path d="M130 97 Q136 107 130 97" fill="#FFD166"/>
+            <path d="M155 97 Q160 104 155 97" fill="#FFD166"/>
+            <!-- ham layer -->
+            <rect x="35" y="78" width="130" height="12" rx="3" fill="#e8906a"/>
+            <path d="M38 82 Q70 78 100 82 Q130 78 162 82" stroke="#d4785a" stroke-width="1.5" fill="none" opacity=".5"/>
+            <!-- top bread -->
+            <rect x="28" y="50" width="144" height="34" rx="8" fill="#b8731a"/>
+            <rect x="31" y="53" width="138" height="28" rx="6" fill="#d4891e"/>
+            <rect x="34" y="56" width="132" height="22" rx="5" fill="#f0a830" opacity=".6"/>
+            <!-- grill marks on top -->
+            <line x1="45" y1="58" x2="45" y2="76" stroke="#8b5010" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+            <line x1="70" y1="58" x2="70" y2="76" stroke="#8b5010" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+            <line x1="95" y1="58" x2="95" y2="76" stroke="#8b5010" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+            <line x1="120" y1="58" x2="120" y2="76" stroke="#8b5010" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+            <line x1="145" y1="58" x2="145" y2="76" stroke="#8b5010" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+            <!-- steam -->
+            <path d="M75 46 Q77 38 75 30" stroke="#ccc" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".5"/>
+            <path d="M100 44 Q102 36 100 28" stroke="#ccc" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".5"/>
+            <path d="M125 46 Q127 38 125 30" stroke="#ccc" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".5"/>
           </svg>
         </div>
         <div class="meal-card-body">
-          <div class="meal-card-name">Crispy Tuna Patties with Veg 🐟</div>
+          <div class="meal-card-name">Toasted Cheese Sandwich</div>
           <div class="ingredient-chips">
-            <span class="chip chip-l">🐟 Tinned tuna</span><span class="chip chip-l">🥔 Frozen mash</span><span class="chip chip-l">🥚 Egg</span><span class="chip chip-l">🥦 Mixed veg</span>
+            <span class="chip chip-l">🍞 Bread</span><span class="chip chip-l">🧀 Cheese</span><span class="chip chip-l">🧈 Butter</span>
           </div>
         </div>
       </div>
-      <!-- DINNER -->
+
       <div class="meal-card">
         <div class="meal-card-art art-dinner">
           <span class="meal-type-ribbon ribbon-dinner">Dinner</span>
-          <svg viewBox="0 0 200 140" width="90%" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="100" cy="108" rx="46" ry="11" fill="#c8782a" opacity=".4"/>
-            <ellipse cx="100" cy="104" rx="48" ry="11" fill="#c8782a"/>
-            <ellipse cx="100" cy="100" rx="46" ry="10" fill="#e8922a"/>
-            <path d="M54 97 Q70 90 100 95 Q130 90 146 97" stroke="#52B788" stroke-width="5" fill="none" stroke-linecap="round"/>
-            <rect x="62" y="84" width="76" height="12" rx="4" fill="#FFD166" opacity=".9"/>
-            <ellipse cx="100" cy="82" rx="44" ry="10" fill="#6B2810"/>
-            <ellipse cx="100" cy="79" rx="42" ry="9" fill="#8B3A1A"/>
-            <path d="M70 77 Q100 73 130 77" stroke="#5a2010" stroke-width="2" fill="none" opacity=".7" stroke-linecap="round"/>
-            <ellipse cx="100" cy="70" rx="44" ry="14" fill="#c8782a"/>
-            <path d="M56 68 Q100 45 144 68" fill="#e8922a"/>
-            <ellipse cx="100" cy="60" rx="42" ry="12" fill="#e8922a"/>
-            <ellipse cx="85" cy="57" rx="3.5" ry="2" fill="#fffbf0" transform="rotate(-20 85 57)"/>
-            <ellipse cx="100" cy="54" rx="3.5" ry="2" fill="#fffbf0"/>
-            <ellipse cx="115" cy="57" rx="3.5" ry="2" fill="#fffbf0" transform="rotate(20 115 57)"/>
-            <ellipse cx="92" cy="62" rx="3" ry="1.8" fill="#fffbf0" transform="rotate(10 92 62)"/>
-            <ellipse cx="108" cy="61" rx="3" ry="1.8" fill="#fffbf0" transform="rotate(-10 108 61)"/>
-            <path d="M142 80 Q148 88 145 96" stroke="#e05020" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- bowl -->
+            <ellipse cx="100" cy="130" rx="75" ry="14" fill="#bbb" opacity=".2"/>
+            <path d="M22 88 Q100 132 178 88" fill="#f0f0f8" stroke="#ddd" stroke-width="1"/>
+            <ellipse cx="100" cy="88" rx="78" ry="20" fill="#f5f5ff" stroke="#e0e0ee" stroke-width="1"/>
+            <!-- noodle waves - multiple layers for depth -->
+            <path d="M30 82 Q50 66 70 82 Q90 98 110 82 Q130 66 150 82 Q165 92 175 82" stroke="#e8c860" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M25 90 Q45 74 65 90 Q85 106 105 90 Q125 74 145 90 Q162 100 172 90" stroke="#d4b048" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M35 98 Q55 82 75 98 Q95 114 115 98 Q135 82 155 98" stroke="#e8c860" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+            <!-- pork mince crumbles -->
+            <ellipse cx="60" cy="78" rx="7" ry="5" fill="#a05030" transform="rotate(-10 60 78)"/>
+            <ellipse cx="88" cy="74" rx="8" ry="5" fill="#904020" transform="rotate(8 88 74)"/>
+            <ellipse cx="118" cy="76" rx="7" ry="5" fill="#a05030" transform="rotate(-5 118 76)"/>
+            <ellipse cx="145" cy="80" rx="6" ry="4" fill="#904020" transform="rotate(12 145 80)"/>
+            <ellipse cx="75" cy="92" rx="7" ry="4" fill="#a05030" transform="rotate(5 75 92)"/>
+            <ellipse cx="130" cy="90" rx="6" ry="4" fill="#904020"/>
+            <!-- green veg bits -->
+            <circle cx="52" cy="86" r="4" fill="#52B788"/>
+            <circle cx="102" cy="82" r="4" fill="#52B788"/>
+            <circle cx="158" cy="88" r="3.5" fill="#52B788"/>
+            <circle cx="80" cy="98" r="3.5" fill="#52B788"/>
+            <!-- soy sauce sheen -->
+            <ellipse cx="100" cy="88" rx="60" ry="12" fill="#5c3010" opacity=".08"/>
+            <!-- sesame seeds -->
+            <ellipse cx="70" cy="76" rx="2.5" ry="1.2" fill="#f5f0e0" transform="rotate(20 70 76)"/>
+            <ellipse cx="110" cy="80" rx="2.5" ry="1.2" fill="#f5f0e0" transform="rotate(-15 110 80)"/>
+            <ellipse cx="140" cy="76" rx="2.5" ry="1.2" fill="#f5f0e0" transform="rotate(10 140 76)"/>
+            <!-- chopsticks -->
+            <rect x="155" y="28" width="4" height="70" rx="2" fill="#c8a060" transform="rotate(12 157 63)"/>
+            <rect x="165" y="28" width="4" height="70" rx="2" fill="#b89050" transform="rotate(8 167 63)"/>
           </svg>
         </div>
         <div class="meal-card-body">
-          <div class="meal-card-name">Smash Burger Night 🍔</div>
+          <div class="meal-card-name">Pork Mince Stir Fry Noodles 🍜</div>
           <div class="ingredient-chips">
-            <span class="chip chip-d">🍔 Burger patties</span><span class="chip chip-d">🥩 Extra mince</span><span class="chip chip-d">🧀 Cheese</span><span class="chip chip-d">🍞 Buns</span>
+            <span class="chip chip-d">🐷 Pork mince</span><span class="chip chip-d">🍜 Noodles</span><span class="chip chip-d">🫙 Soy &amp; garlic</span><span class="chip chip-d">🥦 Mixed veg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TUESDAY -->
+  <div class="day-panel" data-panel="1">
+    <div class="day-title-row"><div class="day-big-title">Tuesday</div><span class="sc-badge">🫕 Slow Cooker Day</span></div>
+    <div class="day-summary">
+      <div class="day-summary-item"><span class="day-summary-type dst-b">Breakfast</span><span class="day-summary-emoji">🥚</span><span class="day-summary-name">Boiled Eggs &amp; Toast Soldiers</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-l">Lunch</span><span class="day-summary-emoji">🍜</span><span class="day-summary-name">Leftover Pork Noodles 🌡️</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-d">Dinner</span><span class="day-summary-emoji">🫕</span><span class="day-summary-name">SC Honey Garlic Pork over Mash</span></div>
+    </div>
+    <div class="meal-cards-grid">
+      <div class="meal-card">
+        <div class="meal-card-art art-breakfast">
+          <span class="meal-type-ribbon ribbon-breakfast">Breakfast</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- egg cup -->
+            <ellipse cx="72" cy="132" rx="26" ry="8" fill="#c8a060" opacity=".3"/>
+            <path d="M48 108 Q72 132 96 108" fill="#c8a060"/>
+            <rect x="60" y="98" width="24" height="12" rx="4" fill="#b89050"/>
+            <!-- egg body -->
+            <ellipse cx="72" cy="94" rx="20" ry="26" fill="white" stroke="#ede0c8" stroke-width="1.5"/>
+            <ellipse cx="72" cy="86" rx="16" ry="20" fill="#fafaf5"/>
+            <!-- cracked top -->
+            <path d="M56 82 Q62 74 68 78 Q72 72 78 78 Q82 74 88 82" stroke="#ddd" stroke-width="1.5" fill="none"/>
+            <!-- runny yolk -->
+            <ellipse cx="72" cy="74" rx="12" ry="10" fill="#FFD030"/>
+            <ellipse cx="68" cy="71" rx="5" ry="4" fill="#FFE566" opacity=".8"/>
+            <!-- yolk drip -->
+            <path d="M76 84 Q80 92 78 100" stroke="#FFD030" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".7"/>
+            <!-- toast soldiers -->
+            <rect x="108" y="58" width="16" height="72" rx="5" fill="#b8731a"/>
+            <rect x="111" y="61" width="10" height="66" rx="4" fill="#e8a030"/>
+            <rect x="128" y="58" width="16" height="72" rx="5" fill="#b8731a"/>
+            <rect x="131" y="61" width="10" height="66" rx="4" fill="#f0b040"/>
+            <rect x="148" y="58" width="16" height="72" rx="5" fill="#b8731a"/>
+            <rect x="151" y="61" width="10" height="66" rx="4" fill="#e8a030"/>
+            <!-- butter on soldiers -->
+            <rect x="112" y="64" width="8" height="5" rx="2" fill="#FFE566" opacity=".7"/>
+            <rect x="132" y="64" width="8" height="5" rx="2" fill="#FFE566" opacity=".7"/>
+            <rect x="152" y="64" width="8" height="5" rx="2" fill="#FFE566" opacity=".7"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Boiled Eggs &amp; Toast Soldiers 🥚</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-b">🥚 Eggs</span><span class="chip chip-b">🍞 Toast</span><span class="chip chip-b">🧈 Butter</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-card-art art-lunch">
+          <span class="meal-type-ribbon ribbon-lunch">Lunch</span>
+          <span class="thermos-tag">🌡️</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="100" cy="130" rx="75" ry="14" fill="#bbb" opacity=".2"/>
+            <path d="M22 88 Q100 132 178 88" fill="#f5f0ff"/>
+            <ellipse cx="100" cy="88" rx="78" ry="20" fill="#f8f5ff"/>
+            <path d="M30 82 Q50 66 70 82 Q90 98 110 82 Q130 66 150 82 Q165 92 175 82" stroke="#e8c860" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M25 90 Q45 74 65 90 Q85 106 105 90 Q125 74 145 90 Q162 100 172 90" stroke="#d4b048" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="65" cy="78" rx="7" ry="5" fill="#a05030" transform="rotate(-10 65 78)"/>
+            <ellipse cx="110" cy="76" rx="7" ry="5" fill="#904020" transform="rotate(8 110 76)"/>
+            <ellipse cx="148" cy="80" rx="6" ry="4" fill="#a05030"/>
+            <circle cx="82" cy="86" r="4" fill="#52B788"/>
+            <circle cx="130" cy="84" r="3.5" fill="#52B788"/>
+            <ellipse cx="100" cy="88" rx="55" ry="10" fill="#5c3010" opacity=".06"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Leftover Pork Stir Fry Noodles 🌡️</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-l">🐷 Pork mince</span><span class="chip chip-l">🍜 Noodles</span><span class="chip chip-l">🥦 Mixed veg</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-card-art art-dinner">
+          <span class="meal-type-ribbon ribbon-dinner">Dinner</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- slow cooker pot -->
+            <ellipse cx="100" cy="138" rx="68" ry="10" fill="#888" opacity=".2"/>
+            <rect x="32" y="60" width="136" height="72" rx="16" fill="#4a4a5a"/>
+            <rect x="36" y="64" width="128" height="64" rx="13" fill="#5a5a6a"/>
+            <!-- handles -->
+            <rect x="18" y="80" width="16" height="24" rx="8" fill="#4a4a5a"/>
+            <rect x="166" y="80" width="16" height="24" rx="8" fill="#4a4a5a"/>
+            <!-- lid -->
+            <ellipse cx="100" cy="62" rx="68" ry="16" fill="#3a3a4a"/>
+            <ellipse cx="100" cy="58" rx="65" ry="14" fill="#4a4a5a"/>
+            <ellipse cx="100" cy="55" rx="60" ry="12" fill="#5a5a6a"/>
+            <!-- lid handle -->
+            <ellipse cx="100" cy="44" rx="18" ry="8" fill="#4a4a5a"/>
+            <ellipse cx="100" cy="42" rx="16" ry="7" fill="#5a5a6a"/>
+            <circle cx="100" cy="40" r="5" fill="#6a6a7a"/>
+            <!-- steam from lid -->
+            <path d="M78 38 Q80 28 78 18" stroke="#ddd" stroke-width="2" fill="none" stroke-linecap="round" opacity=".5"/>
+            <path d="M100 34 Q102 24 100 14" stroke="#ddd" stroke-width="2" fill="none" stroke-linecap="round" opacity=".5"/>
+            <path d="M122 38 Q124 28 122 18" stroke="#ddd" stroke-width="2" fill="none" stroke-linecap="round" opacity=".5"/>
+            <!-- cooking light glow around base -->
+            <rect x="36" y="110" width="128" height="20" rx="0 0 13 13" fill="#c8602a" opacity=".25"/>
+            <!-- honey garlic drips visible through side -->
+            <ellipse cx="100" cy="95" rx="45" ry="12" fill="#FFD166" opacity=".2"/>
+            <!-- label text -->
+            <text x="100" y="100" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle" opacity=".6">Honey Garlic Pork</text>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">🫕 SC Honey Garlic Pork over Mash</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-d">🐷 Pork mince</span><span class="chip chip-d">🍯 Honey &amp; garlic</span><span class="chip chip-d">🥔 Frozen mash</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEDNESDAY -->
+  <div class="day-panel" data-panel="2">
+    <div class="day-title-row"><div class="day-big-title">Wednesday</div></div>
+    <div class="day-summary">
+      <div class="day-summary-item"><span class="day-summary-type dst-b">Breakfast</span><span class="day-summary-emoji">🍞</span><span class="day-summary-name">French Toast &amp; Cinnamon Sugar</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-l">Lunch</span><span class="day-summary-emoji">🫕</span><span class="day-summary-name">Leftover Honey Garlic Pork &amp; Noodles 🌡️</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-d">Dinner</span><span class="day-summary-emoji">🐑</span><span class="day-summary-name">Lamb Steaks, Mash &amp; Mixed Veg</span></div>
+    </div>
+    <div class="meal-cards-grid">
+      <div class="meal-card">
+        <div class="meal-card-art art-breakfast">
+          <span class="meal-type-ribbon ribbon-breakfast">Breakfast</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- plate base -->
+            <ellipse cx="100" cy="136" rx="78" ry="12" fill="#ddd" opacity=".3"/>
+            <ellipse cx="100" cy="132" rx="76" ry="11" fill="#f0f0f0"/>
+            <!-- two french toast slices angled -->
+            <!-- back slice -->
+            <rect x="48" y="52" width="70" height="76" rx="10" fill="#a06018" transform="rotate(8 83 90)"/>
+            <rect x="52" y="56" width="62" height="68" rx="8" fill="#c8801e" transform="rotate(8 83 90)"/>
+            <rect x="55" y="59" width="56" height="62" rx="7" fill="#FFD030" opacity=".65" transform="rotate(8 83 90)"/>
+            <!-- cinnamon sugar speckling -->
+            <circle cx="65" cy="72" r="2" fill="#8B4513" opacity=".5"/>
+            <circle cx="78" cy="66" r="1.8" fill="#8B4513" opacity=".5"/>
+            <circle cx="90" cy="74" r="2" fill="#6B3010" opacity=".4"/>
+            <circle cx="72" cy="82" r="1.5" fill="#8B4513" opacity=".4"/>
+            <circle cx="88" cy="86" r="1.8" fill="#6B3010" opacity=".5"/>
+            <!-- front slice -->
+            <rect x="82" y="56" width="70" height="76" rx="10" fill="#a06018" transform="rotate(-5 117 94)"/>
+            <rect x="86" y="60" width="62" height="68" rx="8" fill="#c8801e" transform="rotate(-5 117 94)"/>
+            <rect x="89" y="63" width="56" height="62" rx="7" fill="#FFD030" opacity=".65" transform="rotate(-5 117 94)"/>
+            <circle cx="102" cy="74" r="2" fill="#8B4513" opacity=".5"/>
+            <circle cx="116" cy="68" r="1.8" fill="#8B4513" opacity=".5"/>
+            <circle cx="128" cy="78" r="2" fill="#6B3010" opacity=".4"/>
+            <circle cx="110" cy="88" r="1.5" fill="#8B4513" opacity=".4"/>
+            <circle cx="124" cy="94" r="1.8" fill="#6B3010" opacity=".5"/>
+            <!-- powdered sugar sparkles -->
+            <text x="60" y="118" font-size="12" fill="#FFD166" opacity=".9">✦</text>
+            <text x="140" y="110" font-size="10" fill="#FFD166" opacity=".8">✦</text>
+            <text x="100" y="46" font-size="8" fill="#FFD166" opacity=".6">✦</text>
+            <!-- maple syrup drizzle -->
+            <path d="M112 96 Q118 108 116 120" stroke="#c86820" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".6"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">French Toast with Cinnamon Sugar ✨</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-b">🍞 Bread</span><span class="chip chip-b">🥚 Egg &amp; milk</span><span class="chip chip-b">🍯 Cinnamon sugar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-card-art art-lunch">
+          <span class="meal-type-ribbon ribbon-lunch">Lunch</span>
+          <span class="thermos-tag">🌡️</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 88 Q100 132 178 88" fill="#f0f0f8"/>
+            <ellipse cx="100" cy="88" rx="78" ry="20" fill="#f5f5ff"/>
+            <!-- noodles -->
+            <path d="M30 82 Q50 66 70 82 Q90 98 110 82 Q130 66 150 82 Q165 92 175 82" stroke="#e8c860" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M25 90 Q45 74 65 90 Q85 106 105 90 Q125 74 145 90" stroke="#d4b048" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+            <!-- honey garlic pork pieces -->
+            <ellipse cx="68" cy="76" rx="9" ry="6" fill="#a05030"/>
+            <ellipse cx="100" cy="74" rx="9" ry="6" fill="#c87030"/>
+            <ellipse cx="132" cy="78" rx="8" ry="5" fill="#a05030"/>
+            <!-- honey glaze shine -->
+            <path d="M60 82 Q100 76 140 82" stroke="#FFD166" stroke-width="2" fill="none" opacity=".5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Leftover Honey Garlic Pork &amp; Noodles 🌡️</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-l">🐷 Pork</span><span class="chip chip-l">🍜 Noodles</span><span class="chip chip-l">🍯 Honey garlic</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-card-art art-dinner">
+          <span class="meal-type-ribbon ribbon-dinner">Dinner</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- plate -->
+            <ellipse cx="100" cy="134" rx="78" ry="12" fill="#bbb" opacity=".2"/>
+            <ellipse cx="100" cy="130" rx="76" ry="14" fill="#e8e8e8"/>
+            <ellipse cx="100" cy="128" rx="72" ry="13" fill="#f5f5f5"/>
+            <!-- mash pile -->
+            <ellipse cx="62" cy="118" rx="32" ry="18" fill="#fffbf0"/>
+            <ellipse cx="62" cy="110" rx="28" ry="16" fill="#fffdf8"/>
+            <ellipse cx="62" cy="104" rx="24" ry="13" fill="white"/>
+            <!-- butter pool on mash -->
+            <ellipse cx="60" cy="100" rx="12" ry="6" fill="#FFE066" opacity=".7"/>
+            <path d="M52 100 Q60 95 68 100" stroke="#FFD030" stroke-width="1.5" fill="none" opacity=".5"/>
+            <!-- lamb steak - well rendered -->
+            <path d="M96 68 Q124 52 152 62 Q162 78 158 96 Q140 110 112 108 Q88 102 84 84 Z" fill="#7a2e10"/>
+            <path d="M100 72 Q126 58 150 67 Q158 80 154 96 Q138 108 112 106 Q90 100 88 84 Z" fill="#9a3e18"/>
+            <path d="M104 76 Q128 64 148 72 Q154 84 150 96 Q136 106 112 104 Q92 98 92 84 Z" fill="#b04820"/>
+            <!-- grill marks cross-hatch -->
+            <path d="M106 78 Q128 70 148 76" stroke="#6a2008" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".7"/>
+            <path d="M104 86 Q126 78 146 84" stroke="#6a2008" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".7"/>
+            <path d="M116 70 Q120 84 118 96" stroke="#6a2008" stroke-width="2" fill="none" stroke-linecap="round" opacity=".5"/>
+            <path d="M132 66 Q136 80 134 94" stroke="#6a2008" stroke-width="2" fill="none" stroke-linecap="round" opacity=".5"/>
+            <!-- garlic butter gloss -->
+            <ellipse cx="126" cy="80" rx="14" ry="7" fill="#FFD166" opacity=".4"/>
+            <!-- bone -->
+            <rect x="150" y="68" width="8" height="32" rx="4" fill="#f0ddd0"/>
+            <ellipse cx="154" cy="67" rx="7" ry="5" fill="#f8ece0"/>
+            <ellipse cx="154" cy="101" rx="7" ry="5" fill="#f8ece0"/>
+            <!-- mixed veg colourful pile -->
+            <circle cx="172" cy="90" r="7" fill="#52B788"/>
+            <circle cx="164" cy="82" r="6" fill="#F4845F"/>
+            <circle cx="176" cy="104" r="6" fill="#52B788"/>
+            <ellipse cx="168" cy="110" rx="6" ry="4" fill="#FFD166"/>
+            <circle cx="178" cy="82" r="5" fill="#74C69D"/>
+            <circle cx="162" cy="100" r="5" fill="#F08060"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Garlic Butter Lamb, Mash &amp; Mixed Veg 🐑</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-d">🐑 Lamb steaks</span><span class="chip chip-d">🧈 Garlic butter</span><span class="chip chip-d">🥔 Mash</span><span class="chip chip-d">🥦 Mixed veg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THURSDAY -->
+  <div class="day-panel" data-panel="3">
+    <div class="day-title-row"><div class="day-big-title">Thursday</div><span class="easy-badge">⚡ Easy Night</span><span class="sc-badge">🫕 Slow Cooker</span></div>
+    <div class="day-summary">
+      <div class="day-summary-item"><span class="day-summary-type dst-b">Breakfast</span><span class="day-summary-emoji">🧀</span><span class="day-summary-name">Mini Cheese Omelette</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-l">Lunch</span><span class="day-summary-emoji">🐑</span><span class="day-summary-name">Leftover Lamb &amp; Rice 🌡️</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-d">Dinner</span><span class="day-summary-emoji">🫕</span><span class="day-summary-name">SC Pork Bolognese over Penne</span></div>
+    </div>
+    <div class="meal-cards-grid">
+      <div class="meal-card">
+        <div class="meal-card-art art-breakfast">
+          <span class="meal-type-ribbon ribbon-breakfast">Breakfast</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- pan -->
+            <ellipse cx="92" cy="136" rx="70" ry="10" fill="#888" opacity=".2"/>
+            <rect x="22" y="72" width="140" height="10" rx="5" fill="#7a7a7a"/>
+            <rect x="160" y="70" width="32" height="8" rx="4" fill="#6a6a6a"/>
+            <!-- pan interior -->
+            <ellipse cx="92" cy="72" rx="70" ry="20" fill="#5a5a6a"/>
+            <ellipse cx="92" cy="70" rx="66" ry="18" fill="#6a6a7a"/>
+            <!-- omelette fold -->
+            <path d="M30 65 Q92 100 154 65 Q148 50 92 44 Q36 50 30 65Z" fill="#FFE066"/>
+            <path d="M34 64 Q92 96 150 64 Q144 52 92 46 Q40 52 34 64Z" fill="#FFF3A0"/>
+            <!-- melted cheese oozing from fold -->
+            <path d="M62 68 Q92 78 122 68" stroke="#FFD030" stroke-width="3" fill="none" opacity=".8"/>
+            <path d="M72 72 Q82 80 92 76 Q102 80 112 72" stroke="#FFD030" stroke-width="2" fill="none" opacity=".6"/>
+            <!-- cheese blobs inside visible -->
+            <ellipse cx="68" cy="58" rx="11" ry="6" fill="#FFD166" opacity=".9"/>
+            <ellipse cx="94" cy="54" rx="12" ry="7" fill="#FFD166" opacity=".9"/>
+            <ellipse cx="118" cy="58" rx="10" ry="6" fill="#FFD166" opacity=".85"/>
+            <!-- herb specks -->
+            <circle cx="74" cy="56" r="1.5" fill="#52B788" opacity=".7"/>
+            <circle cx="100" cy="52" r="1.5" fill="#52B788" opacity=".7"/>
+            <circle cx="112" cy="60" r="1.2" fill="#52B788" opacity=".7"/>
+            <!-- steam -->
+            <path d="M70 40 Q72 30 70 20" stroke="#ddd" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".4"/>
+            <path d="M92 38 Q94 28 92 18" stroke="#ddd" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".4"/>
+            <path d="M114 40 Q116 30 114 20" stroke="#ddd" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".4"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Mini Cheese Omelette 🧀</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-b">🥚 Eggs</span><span class="chip chip-b">🧀 Cheese</span><span class="chip chip-b">🧈 Butter</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-card-art art-lunch">
+          <span class="meal-type-ribbon ribbon-lunch">Lunch</span>
+          <span class="thermos-tag">🌡️</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- bowl -->
+            <ellipse cx="100" cy="130" rx="74" ry="13" fill="#bbb" opacity=".2"/>
+            <path d="M24 90 Q100 132 176 90" fill="#f0f0ff"/>
+            <ellipse cx="100" cy="90" rx="76" ry="20" fill="#f5f5ff"/>
+            <!-- rice grains -->
+            <ellipse cx="55" cy="84" rx="4" ry="2.5" fill="white" transform="rotate(15 55 84)"/>
+            <ellipse cx="68" cy="80" rx="4" ry="2.5" fill="white" transform="rotate(-10 68 80)"/>
+            <ellipse cx="80" cy="84" rx="4" ry="2.5" fill="#fafafa" transform="rotate(20 80 84)"/>
+            <ellipse cx="92" cy="78" rx="4" ry="2.5" fill="white" transform="rotate(-5 92 78)"/>
+            <ellipse cx="106" cy="82" rx="4" ry="2.5" fill="white" transform="rotate(12 106 82)"/>
+            <ellipse cx="118" cy="78" rx="4" ry="2.5" fill="#fafafa" transform="rotate(-18 118 78)"/>
+            <ellipse cx="132" cy="82" rx="4" ry="2.5" fill="white" transform="rotate(8 132 82)"/>
+            <ellipse cx="62" cy="90" rx="4" ry="2.5" fill="white" transform="rotate(-12 62 90)"/>
+            <ellipse cx="76" cy="94" rx="4" ry="2.5" fill="white" transform="rotate(16 76 94)"/>
+            <ellipse cx="100" cy="92" rx="4" ry="2.5" fill="white" transform="rotate(-8 100 92)"/>
+            <ellipse cx="124" cy="90" rx="4" ry="2.5" fill="white" transform="rotate(10 124 90)"/>
+            <ellipse cx="140" cy="86" rx="4" ry="2.5" fill="white" transform="rotate(-15 140 86)"/>
+            <!-- lamb slices on top -->
+            <rect x="72" y="72" width="26" height="12" rx="5" fill="#9a3e18" transform="rotate(-8 85 78)"/>
+            <rect x="100" y="70" width="24" height="12" rx="5" fill="#b04820" transform="rotate(5 112 76)"/>
+            <!-- soy drizzle -->
+            <path d="M65 86 Q100 80 135 86" stroke="#5c3010" stroke-width="1.5" fill="none" opacity=".4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Leftover Lamb &amp; Rice 🌡️</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-l">🐑 Lamb</span><span class="chip chip-l">🍚 Rice</span><span class="chip chip-l">🫙 Soy sauce</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-card-art art-dinner">
+          <span class="meal-type-ribbon ribbon-dinner">Dinner</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- bowl of pasta -->
+            <ellipse cx="100" cy="134" rx="78" ry="12" fill="#bbb" opacity=".2"/>
+            <path d="M20 90 Q100 134 180 90" fill="#fff0e8"/>
+            <ellipse cx="100" cy="90" rx="80" ry="22" fill="#fff5f0"/>
+            <!-- rich bolognese colour layer -->
+            <ellipse cx="100" cy="88" rx="70" ry="18" fill="#c84020" opacity=".15"/>
+            <!-- penne tubes with bolognese -->
+            <rect x="40" y="72" width="22" height="10" rx="5" fill="#e8c060" transform="rotate(-12 51 77)"/>
+            <rect x="68" y="68" width="22" height="10" rx="5" fill="#d4a848" transform="rotate(8 79 73)"/>
+            <rect x="96" y="70" width="22" height="10" rx="5" fill="#e8c060" transform="rotate(-6 107 75)"/>
+            <rect x="124" y="68" width="20" height="10" rx="5" fill="#d4a848" transform="rotate(14 134 73)"/>
+            <rect x="150" y="72" width="20" height="10" rx="5" fill="#e8c060" transform="rotate(-10 160 77)"/>
+            <rect x="50" y="84" width="22" height="10" rx="5" fill="#d4a848" transform="rotate(6 61 89)"/>
+            <rect x="80" y="86" width="22" height="10" rx="5" fill="#e8c060" transform="rotate(-8 91 91)"/>
+            <rect x="112" y="84" width="20" height="10" rx="5" fill="#d4a848" transform="rotate(10 122 89)"/>
+            <rect x="140" y="82" width="20" height="10" rx="5" fill="#e8c060" transform="rotate(-5 150 87)"/>
+            <!-- pork bolognese meat crumbles on top -->
+            <ellipse cx="58" cy="76" rx="8" ry="5" fill="#a03818"/>
+            <ellipse cx="94" cy="72" rx="9" ry="5" fill="#c04820"/>
+            <ellipse cx="128" cy="74" rx="8" ry="5" fill="#a03818"/>
+            <ellipse cx="76" cy="90" rx="8" ry="5" fill="#c04820"/>
+            <ellipse cx="116" cy="88" rx="7" ry="5" fill="#a03818"/>
+            <!-- cheese shavings -->
+            <ellipse cx="88" cy="66" rx="8" ry="3" fill="#fffbf0" opacity=".9" transform="rotate(-15 88 66)"/>
+            <ellipse cx="116" cy="64" rx="8" ry="3" fill="#fffbf0" opacity=".9" transform="rotate(10 116 64)"/>
+            <!-- herb garnish -->
+            <circle cx="100" cy="66" r="4" fill="#52B788"/>
+            <circle cx="96" cy="63" r="2.5" fill="#74C69D"/>
+            <circle cx="104" cy="63" r="2.5" fill="#74C69D"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">🫕 SC Pork Bolognese over Penne 🍝</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-d">🐷 Pork mince</span><span class="chip chip-d">🍅 Tomato</span><span class="chip chip-d">🍝 Penne</span><span class="chip chip-d">🧀 Cheese</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FRIDAY -->
+  <div class="day-panel" data-panel="4">
+    <div class="day-title-row"><div class="day-big-title">Friday</div></div>
+    <div class="day-summary">
+      <div class="day-summary-item"><span class="day-summary-type dst-b">Breakfast</span><span class="day-summary-emoji">🫘</span><span class="day-summary-name">Baked Beans on Toast</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-l">Lunch</span><span class="day-summary-emoji">🍝</span><span class="day-summary-name">Leftover Bolognese Penne 🌡️</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-d">Dinner</span><span class="day-summary-emoji">🍔</span><span class="day-summary-name">Burger Night!</span></div>
+    </div>
+    <div class="meal-cards-grid">
+      <div class="meal-card">
+        <div class="meal-card-art art-breakfast">
+          <span class="meal-type-ribbon ribbon-breakfast">Breakfast</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- toast base -->
+            <rect x="30" y="48" width="140" height="92" rx="10" fill="#a06018"/>
+            <rect x="34" y="52" width="132" height="84" rx="8" fill="#c8801e"/>
+            <rect x="38" y="56" width="124" height="76" rx="7" fill="#e8a030" opacity=".7"/>
+            <!-- baked beans covering toast -->
+            <rect x="38" y="62" width="124" height="66" rx="6" fill="#d06828"/>
+            <!-- individual beans - many of them -->
+            <ellipse cx="58" cy="72" rx="8" ry="5.5" fill="#e87a30"/>
+            <ellipse cx="78" cy="70" rx="8" ry="5.5" fill="#f08040"/>
+            <ellipse cx="98" cy="72" rx="8" ry="5.5" fill="#e87a30"/>
+            <ellipse cx="118" cy="70" rx="8" ry="5.5" fill="#f08040"/>
+            <ellipse cx="138" cy="72" rx="8" ry="5.5" fill="#e87a30"/>
+            <ellipse cx="50" cy="82" rx="8" ry="5.5" fill="#f08040"/>
+            <ellipse cx="70" cy="84" rx="8" ry="5.5" fill="#e87a30"/>
+            <ellipse cx="90" cy="82" rx="8" ry="5.5" fill="#f08040"/>
+            <ellipse cx="110" cy="84" rx="8" ry="5.5" fill="#e87a30"/>
+            <ellipse cx="130" cy="82" rx="8" ry="5.5" fill="#f08040"/>
+            <ellipse cx="150" cy="82" rx="8" ry="5.5" fill="#e87a30"/>
+            <ellipse cx="58" cy="96" rx="8" ry="5.5" fill="#e87a30"/>
+            <ellipse cx="78" cy="94" rx="8" ry="5.5" fill="#f08040"/>
+            <ellipse cx="98" cy="96" rx="8" ry="5.5" fill="#e87a30"/>
+            <ellipse cx="118" cy="94" rx="8" ry="5.5" fill="#f08040"/>
+            <ellipse cx="138" cy="96" rx="8" ry="5.5" fill="#e87a30"/>
+            <ellipse cx="68" cy="108" rx="8" ry="5.5" fill="#f08040"/>
+            <ellipse cx="88" cy="110" rx="8" ry="5.5" fill="#e87a30"/>
+            <ellipse cx="108" cy="108" rx="8" ry="5.5" fill="#f08040"/>
+            <ellipse cx="128" cy="110" rx="8" ry="5.5" fill="#e87a30"/>
+            <!-- tomato sauce sheen over top -->
+            <rect x="38" y="62" width="124" height="66" rx="6" fill="#c84820" opacity=".18"/>
+            <!-- steam -->
+            <path d="M80 44 Q82 34 80 24" stroke="#ccc" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".4"/>
+            <path d="M100 42 Q102 32 100 22" stroke="#ccc" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".4"/>
+            <path d="M120 44 Q122 34 120 24" stroke="#ccc" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".4"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Baked Beans on Toast 🫘</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-b">🫘 Baked beans</span><span class="chip chip-b">🍞 Toast</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-card-art art-lunch">
+          <span class="meal-type-ribbon ribbon-lunch">Lunch</span>
+          <span class="thermos-tag">🌡️</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 90 Q100 134 180 90" fill="#fff0e8"/>
+            <ellipse cx="100" cy="90" rx="80" ry="22" fill="#fff5f0"/>
+            <ellipse cx="100" cy="88" rx="68" ry="17" fill="#c84020" opacity=".12"/>
+            <rect x="40" y="72" width="22" height="10" rx="5" fill="#e8c060" transform="rotate(-12 51 77)"/>
+            <rect x="68" y="68" width="22" height="10" rx="5" fill="#d4a848" transform="rotate(8 79 73)"/>
+            <rect x="96" y="70" width="22" height="10" rx="5" fill="#e8c060" transform="rotate(-6 107 75)"/>
+            <rect x="124" y="68" width="20" height="10" rx="5" fill="#d4a848" transform="rotate(14 134 73)"/>
+            <rect x="50" y="84" width="22" height="10" rx="5" fill="#d4a848" transform="rotate(6 61 89)"/>
+            <rect x="80" y="86" width="22" height="10" rx="5" fill="#e8c060" transform="rotate(-8 91 91)"/>
+            <rect x="112" y="84" width="20" height="10" rx="5" fill="#d4a848" transform="rotate(10 122 89)"/>
+            <ellipse cx="74" cy="74" rx="8" ry="5" fill="#a03818"/>
+            <ellipse cx="110" cy="72" rx="9" ry="5" fill="#c04820"/>
+            <ellipse cx="140" cy="76" rx="7" ry="4" fill="#a03818"/>
+            <ellipse cx="100" cy="66" rx="7" ry="3" fill="#fffbf0" opacity=".9" transform="rotate(-10 100 66)"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Leftover Pork Bolognese Penne 🌡️</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-l">🐷 Pork bolognese</span><span class="chip chip-l">🍝 Penne</span><span class="chip chip-l">🧀 Cheese</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-card-art art-dinner">
+          <span class="meal-type-ribbon ribbon-dinner">Dinner</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- sesame bun top -->
+            <ellipse cx="100" cy="134" rx="60" ry="9" fill="#bbb" opacity=".2"/>
+            <!-- bottom bun -->
+            <ellipse cx="100" cy="118" rx="58" ry="13" fill="#c8782a"/>
+            <rect x="42" y="106" width="116" height="16" rx="0" fill="#c8782a"/>
+            <ellipse cx="100" cy="106" rx="58" ry="12" fill="#d8882a"/>
+            <!-- lettuce frilly -->
+            <path d="M40 104 Q52 96 64 104 Q76 96 88 104 Q100 96 112 104 Q124 96 136 104 Q148 96 160 104" stroke="#52B788" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <!-- cheese melt -->
+            <rect x="44" y="90" width="112" height="16" rx="4" fill="#FFD166"/>
+            <path d="M44 106 Q50 114 44 106" fill="#FFD166"/>
+            <path d="M80 106 Q86 116 80 106" fill="#FFD166"/>
+            <path d="M130 106 Q136 114 130 106" fill="#FFD166"/>
+            <path d="M156 106 Q162 112 156 106" fill="#FFD166"/>
+            <!-- patty - smashed and crispy edged -->
+            <ellipse cx="100" cy="88" rx="56" ry="14" fill="#5a2008"/>
+            <ellipse cx="100" cy="85" rx="54" ry="13" fill="#7a2e10"/>
+            <ellipse cx="100" cy="82" rx="52" ry="12" fill="#9a3a14"/>
+            <!-- crispy edge texture -->
+            <path d="M48 84 Q100 76 152 84" stroke="#4a1806" stroke-width="2" fill="none" opacity=".6"/>
+            <path d="M50 90 Q100 82 150 90" stroke="#4a1806" stroke-width="2" fill="none" opacity=".5"/>
+            <!-- sauce drip -->
+            <path d="M152 88 Q158 98 156 110" stroke="#c83020" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".7"/>
+            <!-- top bun -->
+            <ellipse cx="100" cy="70" rx="58" ry="16" fill="#c8782a"/>
+            <path d="M42 68 Q100 36 158 68" fill="#d8882a"/>
+            <ellipse cx="100" cy="54" rx="56" ry="18" fill="#d8882a"/>
+            <ellipse cx="100" cy="50" rx="52" ry="16" fill="#e8982a"/>
+            <!-- sesame seeds -->
+            <ellipse cx="78" cy="46" rx="4" ry="2.2" fill="#fffbf0" transform="rotate(-20 78 46)"/>
+            <ellipse cx="96" cy="42" rx="4" ry="2.2" fill="#fffbf0"/>
+            <ellipse cx="114" cy="46" rx="4" ry="2.2" fill="#fffbf0" transform="rotate(20 114 46)"/>
+            <ellipse cx="86" cy="52" rx="3.5" ry="2" fill="#fffbf0" transform="rotate(10 86 52)"/>
+            <ellipse cx="108" cy="50" rx="3.5" ry="2" fill="#fffbf0" transform="rotate(-10 108 50)"/>
+            <ellipse cx="122" cy="54" rx="3.5" ry="2" fill="#fffbf0" transform="rotate(15 122 54)"/>
+            <ellipse cx="76" cy="56" rx="3.5" ry="2" fill="#fffbf0" transform="rotate(-15 76 56)"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Burger Night 🍔</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-d">🍔 Burger patties</span><span class="chip chip-d">🧀 Cheese</span><span class="chip chip-d">🥬 Lettuce</span><span class="chip chip-d">🍞 Buns</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SATURDAY -->
+  <div class="day-panel" data-panel="5">
+    <div class="day-title-row"><div class="day-big-title">Saturday</div></div>
+    <div class="day-summary">
+      <div class="day-summary-item"><span class="day-summary-type dst-b">Breakfast</span><span class="day-summary-emoji">🥞</span><span class="day-summary-name">Pancakes with Butter &amp; Syrup</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-l">Lunch</span><span class="day-summary-emoji">🥪</span><span class="day-summary-name">Ham &amp; Cheese Toastie</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-d">Dinner</span><span class="day-summary-emoji">🐑</span><span class="day-summary-name">Soy Honey Lamb, Mash &amp; Mixed Veg</span></div>
+    </div>
+    <div class="meal-cards-grid">
+      <div class="meal-card">
+        <div class="meal-card-art art-breakfast">
+          <span class="meal-type-ribbon ribbon-breakfast">Breakfast</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- plate -->
+            <ellipse cx="100" cy="136" rx="78" ry="11" fill="#ddd" opacity=".3"/>
+            <ellipse cx="100" cy="132" rx="76" ry="10" fill="#f0f0f0"/>
+            <!-- stack of 4 pancakes - very detailed -->
+            <!-- bottom pancake - largest, most brown -->
+            <ellipse cx="100" cy="126" rx="52" ry="13" fill="#a06018" opacity=".5"/>
+            <ellipse cx="100" cy="122" rx="50" ry="12" fill="#b87020"/>
+            <ellipse cx="100" cy="119" rx="48" ry="11" fill="#d08828"/>
+            <ellipse cx="100" cy="116" rx="46" ry="10" fill="#e8a030" opacity=".7"/>
+            <!-- bubble pattern on visible face -->
+            <circle cx="80" cy="114" r="3" fill="#c07820" opacity=".5"/>
+            <circle cx="100" cy="112" r="2.8" fill="#c07820" opacity=".5"/>
+            <circle cx="120" cy="114" r="3" fill="#c07820" opacity=".5"/>
+            <!-- 3rd pancake -->
+            <ellipse cx="100" cy="110" rx="46" ry="11" fill="#b87020"/>
+            <ellipse cx="100" cy="107" rx="44" ry="10" fill="#d08828"/>
+            <ellipse cx="100" cy="104" rx="42" ry="9" fill="#e8a030" opacity=".7"/>
+            <circle cx="84" cy="102" r="2.5" fill="#c07820" opacity=".5"/>
+            <circle cx="102" cy="100" r="2.5" fill="#c07820" opacity=".5"/>
+            <circle cx="116" cy="102" r="2.5" fill="#c07820" opacity=".5"/>
+            <!-- 2nd pancake -->
+            <ellipse cx="100" cy="98" rx="44" ry="11" fill="#b87020"/>
+            <ellipse cx="100" cy="95" rx="42" ry="10" fill="#d08828"/>
+            <ellipse cx="100" cy="92" rx="40" ry="9" fill="#e8a030" opacity=".7"/>
+            <circle cx="86" cy="90" r="2.5" fill="#c07820" opacity=".5"/>
+            <circle cx="100" cy="88" r="2.5" fill="#c07820" opacity=".5"/>
+            <circle cx="114" cy="90" r="2.5" fill="#c07820" opacity=".5"/>
+            <!-- top pancake - lightest, most golden -->
+            <ellipse cx="100" cy="86" rx="42" ry="11" fill="#c07820"/>
+            <ellipse cx="100" cy="83" rx="40" ry="10" fill="#d89030"/>
+            <ellipse cx="100" cy="80" rx="38" ry="9" fill="#F0A830"/>
+            <ellipse cx="100" cy="77" rx="36" ry="8" fill="#FFD166" opacity=".6"/>
+            <!-- bubble holes on top -->
+            <circle cx="84" cy="76" r="3" fill="#c07820" opacity=".45"/>
+            <circle cx="98" cy="73" r="2.5" fill="#c07820" opacity=".45"/>
+            <circle cx="112" cy="76" r="3" fill="#c07820" opacity=".45"/>
+            <circle cx="90" cy="80" r="2" fill="#c07820" opacity=".3"/>
+            <circle cx="108" cy="79" r="2" fill="#c07820" opacity=".3"/>
+            <!-- butter pat melting on top -->
+            <ellipse cx="100" cy="70" rx="16" ry="8" fill="#FFE566" opacity=".9"/>
+            <ellipse cx="100" cy="68" rx="13" ry="6" fill="#FFF3A0" opacity=".8"/>
+            <!-- maple syrup drizzle cascading down sides -->
+            <path d="M116 80 Q124 92 122 110" stroke="#c86820" stroke-width="3" fill="none" stroke-linecap="round" opacity=".65"/>
+            <path d="M84 80 Q76 90 78 108" stroke="#c86820" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".55"/>
+            <path d="M130 90 Q136 104 134 118" stroke="#c86820" stroke-width="2" fill="none" stroke-linecap="round" opacity=".45"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Pancake Stack with Butter &amp; Maple Syrup 🥞</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-b">🥞 Pancake mix</span><span class="chip chip-b">🧈 Butter</span><span class="chip chip-b">🍯 Maple syrup</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-card-art art-lunch">
+          <span class="meal-type-ribbon ribbon-lunch">Lunch</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- shadow -->
+            <ellipse cx="100" cy="136" rx="72" ry="9" fill="#bbb" opacity=".25"/>
+            <!-- bottom bread slice -->
+            <rect x="26" y="98" width="148" height="30" rx="6" fill="#b8731a"/>
+            <rect x="30" y="102" width="140" height="22" rx="5" fill="#d4891e"/>
+            <!-- melted cheese oozing from bottom -->
+            <rect x="34" y="93" width="132" height="14" rx="4" fill="#FFD166"/>
+            <path d="M44 107 Q50 116 44 107" fill="#FFD166"/>
+            <path d="M84 107 Q90 118 84 107" fill="#FFD166"/>
+            <path d="M134 107 Q140 116 134 107" fill="#FFD166"/>
+            <path d="M162 107 Q167 114 162 107" fill="#FFD166"/>
+            <!-- ham layer - pink and textured -->
+            <rect x="34" y="80" width="132" height="16" rx="3" fill="#e8907a"/>
+            <path d="M38 86 Q58 82 78 86 Q98 82 118 86 Q138 82 158 86 Q164 86 166 88" stroke="#d07060" stroke-width="1.5" fill="none" opacity=".5" stroke-linecap="round"/>
+            <ellipse cx="70" cy="86" rx="8" ry="4" fill="#f0a090" opacity=".5"/>
+            <ellipse cx="110" cy="84" rx="8" ry="4" fill="#f0a090" opacity=".5"/>
+            <ellipse cx="148" cy="86" rx="7" ry="4" fill="#f0a090" opacity=".5"/>
+            <!-- top bread - grilled golden -->
+            <rect x="26" y="48" width="148" height="36" rx="8" fill="#b8731a"/>
+            <rect x="30" y="52" width="140" height="28" rx="6" fill="#d4891e"/>
+            <rect x="34" y="56" width="132" height="20" rx="5" fill="#f0a830" opacity=".6"/>
+            <!-- grill press marks -->
+            <line x1="42" y1="56" x2="42" y2="74" stroke="#8b5010" stroke-width="3.5" stroke-linecap="round" opacity=".45"/>
+            <line x1="68" y1="56" x2="68" y2="74" stroke="#8b5010" stroke-width="3.5" stroke-linecap="round" opacity=".45"/>
+            <line x1="94" y1="56" x2="94" y2="74" stroke="#8b5010" stroke-width="3.5" stroke-linecap="round" opacity=".45"/>
+            <line x1="120" y1="56" x2="120" y2="74" stroke="#8b5010" stroke-width="3.5" stroke-linecap="round" opacity=".45"/>
+            <line x1="146" y1="56" x2="146" y2="74" stroke="#8b5010" stroke-width="3.5" stroke-linecap="round" opacity=".45"/>
+            <!-- steam -->
+            <path d="M80 44 Q82 34 80 24" stroke="#ccc" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".4"/>
+            <path d="M104 42 Q106 32 104 22" stroke="#ccc" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".4"/>
+            <path d="M128 44 Q130 34 128 24" stroke="#ccc" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".4"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Toasted Ham &amp; Cheese Toastie 🥪</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-l">🍞 Bread</span><span class="chip chip-l">🥩 Ham</span><span class="chip chip-l">🧀 Cheese</span><span class="chip chip-l">🧈 Butter</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-card-art art-dinner">
+          <span class="meal-type-ribbon ribbon-dinner">Dinner</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- plate -->
+            <ellipse cx="100" cy="136" rx="78" ry="11" fill="#bbb" opacity=".2"/>
+            <ellipse cx="100" cy="132" rx="76" ry="13" fill="#e8e8e8"/>
+            <ellipse cx="100" cy="130" rx="72" ry="12" fill="#f5f5f5"/>
+            <!-- mash -->
+            <ellipse cx="60" cy="120" rx="30" ry="18" fill="#fffbf0"/>
+            <ellipse cx="60" cy="112" rx="27" ry="16" fill="#fffdf8"/>
+            <ellipse cx="60" cy="106" rx="23" ry="14" fill="white"/>
+            <!-- butter melting into mash -->
+            <path d="M48 104 Q60 98 72 104" stroke="#FFD030" stroke-width="3" fill="none" opacity=".6" stroke-linecap="round"/>
+            <ellipse cx="60" cy="100" rx="10" ry="5" fill="#FFE566" opacity=".6"/>
+            <!-- honey garlic lamb steaks - rich caramel glaze -->
+            <path d="M92 65 Q124 50 156 62 Q164 80 158 100 Q136 114 108 112 Q82 108 78 88 Z" fill="#6a2208"/>
+            <path d="M96 68 Q126 55 154 66 Q160 82 155 100 Q135 112 108 110 Q84 106 82 88 Z" fill="#8a3010"/>
+            <path d="M100 72 Q128 60 152 70 Q157 85 152 100 Q134 110 108 108 Q86 104 86 88 Z" fill="#a83e16"/>
+            <!-- honey caramel glaze - golden sheen -->
+            <path d="M104 74 Q130 64 150 74" stroke="#FFD030" stroke-width="3.5" fill="none" opacity=".8" stroke-linecap="round"/>
+            <path d="M102 82 Q128 72 150 82" stroke="#FFD166" stroke-width="2.5" fill="none" opacity=".6" stroke-linecap="round"/>
+            <ellipse cx="126" cy="78" rx="16" ry="8" fill="#FFD166" opacity=".35"/>
+            <!-- grill marks visible under glaze -->
+            <path d="M108 76 Q128 70 148 76" stroke="#6a2208" stroke-width="2" fill="none" opacity=".5" stroke-linecap="round"/>
+            <path d="M112 90" stroke="#6a2208" stroke-width="2" fill="none" opacity=".4"/>
+            <!-- bone -->
+            <rect x="152" y="68" width="8" height="34" rx="4" fill="#f0ddd0"/>
+            <ellipse cx="156" cy="67" rx="7" ry="5" fill="#f8ece0"/>
+            <ellipse cx="156" cy="103" rx="7" ry="5" fill="#f8ece0"/>
+            <!-- mixed veg pile - colourful -->
+            <circle cx="174" cy="92" r="7" fill="#52B788"/>
+            <circle cx="166" cy="84" r="6.5" fill="#F4845F"/>
+            <circle cx="178" cy="106" r="6" fill="#52B788"/>
+            <ellipse cx="170" cy="112" rx="6" ry="4" fill="#FFD166"/>
+            <circle cx="180" cy="84" r="5" fill="#74C69D"/>
+            <circle cx="164" cy="100" r="5.5" fill="#F08060"/>
+            <circle cx="172" cy="78" r="4.5" fill="#52B788"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Soy Honey Lamb, Mash &amp; Mixed Veg 🐑</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-d">🐑 Lamb steaks</span><span class="chip chip-d">🍯 Soy &amp; honey</span><span class="chip chip-d">🥔 Mash</span><span class="chip chip-d">🥦 Mixed veg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUNDAY -->
+  <div class="day-panel" data-panel="6">
+    <div class="day-title-row"><div class="day-big-title">Sunday</div></div>
+    <div class="day-summary">
+      <div class="day-summary-item"><span class="day-summary-type dst-b">Breakfast</span><span class="day-summary-emoji">🥐</span><span class="day-summary-name">Puff Pastry Cinnamon Scrolls</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-l">Lunch</span><span class="day-summary-emoji">🐟</span><span class="day-summary-name">Tuna &amp; Penne with Cheese</span></div>
+      <div class="day-summary-item"><span class="day-summary-type dst-d">Dinner</span><span class="day-summary-emoji">🐠</span><span class="day-summary-name">Garlic Butter Basa, Mash &amp; Veg</span></div>
+    </div>
+    <div class="meal-cards-grid">
+      <div class="meal-card">
+        <div class="meal-card-art art-breakfast">
+          <span class="meal-type-ribbon ribbon-breakfast">Breakfast</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- baking tray -->
+            <rect x="15" y="100" width="170" height="42" rx="6" fill="#9a9a9a"/>
+            <rect x="18" y="103" width="164" height="36" rx="5" fill="#b0b0b0"/>
+            <!-- 6 cinnamon scrolls in tray -->
+            <!-- row 1: 3 scrolls -->
+            <!-- scroll 1 -->
+            <ellipse cx="46" cy="108" rx="22" ry="20" fill="#c87820"/>
+            <path d="M46 90 Q68 90 68 108 Q68 126 46 126 Q24 126 24 108 Q24 90 46 90Z" fill="#d88828" opacity=".7"/>
+            <path d="M46 96 Q62 96 62 108 Q62 120 46 120 Q30 120 30 108 Q30 96 46 96Z" fill="#e89830"/>
+            <path d="M46 100 Q58 100 58 108 Q58 116 46 116 Q34 116 34 108 Q34 100 46 100Z" fill="#f0a838"/>
+            <path d="M46 104 Q54 104 54 108 Q54 112 46 112 Q38 112 38 108 Q38 104 46 104Z" fill="#FFD166" opacity=".7"/>
+            <circle cx="46" cy="108" r="4" fill="#8B4513" opacity=".6"/>
+            <!-- scroll 2 -->
+            <ellipse cx="100" cy="108" rx="22" ry="20" fill="#c87820"/>
+            <path d="M100 96 Q116 96 116 108 Q116 120 100 120 Q84 120 84 108 Q84 96 100 96Z" fill="#e89830"/>
+            <path d="M100 100 Q112 100 112 108 Q112 116 100 116 Q88 116 88 108 Q88 100 100 100Z" fill="#f0a838"/>
+            <path d="M100 104 Q108 104 108 108 Q108 112 100 112 Q92 112 92 108 Q92 104 100 104Z" fill="#FFD166" opacity=".7"/>
+            <circle cx="100" cy="108" r="4" fill="#8B4513" opacity=".6"/>
+            <!-- scroll 3 -->
+            <ellipse cx="154" cy="108" rx="22" ry="20" fill="#c87820"/>
+            <path d="M154 96 Q170 96 170 108 Q170 120 154 120 Q138 120 138 108 Q138 96 154 96Z" fill="#e89830"/>
+            <path d="M154 100 Q166 100 166 108 Q166 116 154 116 Q142 116 142 108 Q142 100 154 100Z" fill="#f0a838"/>
+            <path d="M154 104 Q162 104 162 108 Q162 112 154 112 Q146 112 146 108 Q146 104 154 104Z" fill="#FFD166" opacity=".7"/>
+            <circle cx="154" cy="108" r="4" fill="#8B4513" opacity=".6"/>
+            <!-- icing drizzle on all -->
+            <path d="M26 94 Q46 88 66 94" stroke="white" stroke-width="3" fill="none" opacity=".7" stroke-linecap="round"/>
+            <path d="M80 94 Q100 88 120 94" stroke="white" stroke-width="3" fill="none" opacity=".7" stroke-linecap="round"/>
+            <path d="M134 94 Q154 88 174 94" stroke="white" stroke-width="3" fill="none" opacity=".7" stroke-linecap="round"/>
+            <!-- cinnamon sugar sparkles -->
+            <text x="36" y="84" font-size="10" fill="#FFD166" opacity=".8">✦</text>
+            <text x="90" y="82" font-size="10" fill="#FFD166" opacity=".8">✦</text>
+            <text x="144" y="84" font-size="10" fill="#FFD166" opacity=".8">✦</text>
+            <!-- steam -->
+            <path d="M46 82 Q48 72 46 62" stroke="#ddd" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".4"/>
+            <path d="M100 80 Q102 70 100 60" stroke="#ddd" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".4"/>
+            <path d="M154 82 Q156 72 154 62" stroke="#ddd" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".4"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Puff Pastry Cinnamon Scrolls 🥐 Kids help!</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-b">🥐 Puff pastry</span><span class="chip chip-b">🧈 Butter</span><span class="chip chip-b">🍯 Cinnamon sugar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-card-art art-lunch">
+          <span class="meal-type-ribbon ribbon-lunch">Lunch</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="100" cy="132" rx="76" ry="13" fill="#bbb" opacity=".2"/>
+            <path d="M22 90 Q100 134 178 90" fill="#f0f6ff"/>
+            <ellipse cx="100" cy="90" rx="78" ry="22" fill="#f5f8ff"/>
+            <!-- penne tubes many layers -->
+            <rect x="34" y="72" width="22" height="10" rx="5" fill="#f0d090" transform="rotate(-14 45 77)"/>
+            <rect x="60" y="68" width="22" height="10" rx="5" fill="#e0c080" transform="rotate(7 71 73)"/>
+            <rect x="88" y="70" width="22" height="10" rx="5" fill="#f0d090" transform="rotate(-8 99 75)"/>
+            <rect x="116" y="68" width="22" height="10" rx="5" fill="#e0c080" transform="rotate(12 127 73)"/>
+            <rect x="144" y="70" width="22" height="10" rx="5" fill="#f0d090" transform="rotate(-10 155 75)"/>
+            <rect x="44" y="84" width="22" height="10" rx="5" fill="#e0c080" transform="rotate(5 55 89)"/>
+            <rect x="72" y="86" width="22" height="10" rx="5" fill="#f0d090" transform="rotate(-6 83 91)"/>
+            <rect x="102" y="84" width="22" height="10" rx="5" fill="#e0c080" transform="rotate(9 113 89)"/>
+            <rect x="132" y="82" width="20" height="10" rx="5" fill="#f0d090" transform="rotate(-5 142 87)"/>
+            <!-- tuna flakes on top -->
+            <path d="M68 72 Q80 66 86 74" stroke="#8ca0c8" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+            <path d="M106 70 Q118 64 124 72" stroke="#7890b8" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+            <path d="M88 86 Q98 80 104 88" stroke="#8ca0c8" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <!-- cheese shreds -->
+            <path d="M72 66 Q100 60 128 66" stroke="#FFD166" stroke-width="2.5" fill="none" opacity=".9" stroke-linecap="round"/>
+            <path d="M80 90 Q100 84 120 90" stroke="#FFD166" stroke-width="2" fill="none" opacity=".7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Tuna &amp; Penne with Cheese 🐟</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-l">🐟 Tinned tuna</span><span class="chip chip-l">🍝 Penne</span><span class="chip chip-l">🧀 Cheese</span><span class="chip chip-l">🧈 Butter</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-card-art art-dinner">
+          <span class="meal-type-ribbon ribbon-dinner">Dinner</span>
+          <svg viewBox="0 0 200 150" width="92%" xmlns="http://www.w3.org/2000/svg">
+            <!-- plate -->
+            <ellipse cx="100" cy="136" rx="78" ry="11" fill="#bbb" opacity=".2"/>
+            <ellipse cx="100" cy="132" rx="76" ry="13" fill="#e8e8e8"/>
+            <ellipse cx="100" cy="130" rx="72" ry="12" fill="#f5f5f5"/>
+            <!-- mash -->
+            <ellipse cx="62" cy="120" rx="30" ry="17" fill="#fffbf0"/>
+            <ellipse cx="62" cy="112" rx="26" ry="15" fill="#fffdf8"/>
+            <ellipse cx="62" cy="106" rx="22" ry="12" fill="white"/>
+            <ellipse cx="62" cy="100" rx="10" ry="5" fill="#FFE566" opacity=".6"/>
+            <!-- basa fillet - beautifully rendered -->
+            <path d="M94 62 Q128 46 160 58 Q168 74 162 94 Q140 108 112 104 Q86 98 82 80 Z" fill="#f5e8d0"/>
+            <path d="M98 66 Q130 52 158 63 Q164 77 158 94 Q138 106 112 102 Q88 96 86 80 Z" fill="#faf0e0"/>
+            <!-- fish flesh texture - flaking lines -->
+            <path d="M100 70 Q128 60 155 68" stroke="#e8d8c0" stroke-width="2" fill="none" opacity=".7" stroke-linecap="round"/>
+            <path d="M98 78 Q126 68 155 76" stroke="#e8d8c0" stroke-width="2" fill="none" opacity=".7" stroke-linecap="round"/>
+            <path d="M98 86 Q126 76 155 84" stroke="#e8d8c0" stroke-width="2" fill="none" opacity=".7" stroke-linecap="round"/>
+            <!-- skin edge line -->
+            <path d="M94 62 Q90 74 86 86 Q88 96 94 100" stroke="#d4c0a0" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".6"/>
+            <!-- garlic butter pooling -->
+            <ellipse cx="128" cy="78" rx="22" ry="10" fill="#FFD166" opacity=".4"/>
+            <path d="M108 74 Q128 68 148 74" stroke="#FFD030" stroke-width="2.5" fill="none" opacity=".7" stroke-linecap="round"/>
+            <!-- garlic bits visible -->
+            <ellipse cx="118" cy="76" rx="3" ry="2" fill="#fffbf0" opacity=".9"/>
+            <ellipse cx="136" cy="72" rx="3" ry="2" fill="#fffbf0" opacity=".9"/>
+            <!-- lemon slice -->
+            <circle cx="162" cy="60" r="12" fill="#FFE066" stroke="#c8a030" stroke-width="1.5"/>
+            <circle cx="162" cy="60" r="9" fill="#FFF3A0"/>
+            <line x1="153" y1="60" x2="171" y2="60" stroke="#c8a030" stroke-width="1.2"/>
+            <line x1="162" y1="51" x2="162" y2="69" stroke="#c8a030" stroke-width="1.2"/>
+            <line x1="155" y1="53" x2="169" y2="67" stroke="#c8a030" stroke-width="1" opacity=".5"/>
+            <line x1="169" y1="53" x2="155" y2="67" stroke="#c8a030" stroke-width="1" opacity=".5"/>
+            <!-- colourful veg pile -->
+            <circle cx="174" cy="95" r="7" fill="#52B788"/>
+            <circle cx="165" cy="86" r="6" fill="#F4845F"/>
+            <circle cx="178" cy="108" r="6" fill="#52B788"/>
+            <ellipse cx="168" cy="114" rx="6" ry="4" fill="#FFD166"/>
+            <circle cx="180" cy="86" r="5" fill="#74C69D"/>
+            <circle cx="163" cy="102" r="5" fill="#F08060"/>
+          </svg>
+        </div>
+        <div class="meal-card-body">
+          <div class="meal-card-name">Garlic Butter Basa, Mash &amp; Veg 🐠</div>
+          <div class="ingredient-chips">
+            <span class="chip chip-d">🐠 Basa fillets</span><span class="chip chip-d">🧈 Garlic butter</span><span class="chip chip-d">🥔 Frozen mash</span><span class="chip chip-d">🥦 Mixed veg</span>
           </div>
         </div>
       </div>
@@ -733,147 +1153,141 @@
 
 <!-- ═══ RECIPES ═══ -->
 <div class="section section-recipes">
-  <div class="recipes-intro">Tap any recipe to expand. All serve 4. 🌡️ = prep night before for thermos lunches.</div>
+  <div class="recipes-intro">Tap any recipe to expand. All serve 4 (2 adults + 2 kids). 🌡️ = prep night before for thermos lunches.</div>
+
+  <div class="recipe-day-label">Monday</div>
+  <div class="recipe-cards">
+    <input type="checkbox" class="recipe-toggle" id="r1">
+    <div class="recipe-card"><label class="recipe-header-label" for="r1"><div class="recipe-title-wrap"><div class="recipe-title">Pork Mince Stir Fry Noodles</div><div class="recipe-meta">Dinner · 20 mins · one pan</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>500g pork mince</li><li>400g hokkien noodles</li><li>3 tbsp soy sauce</li><li>1 tbsp oyster sauce</li><li>2 tsp garlic powder</li><li>1 tsp sesame oil (optional)</li><li>2 cups frozen mixed veg</li><li>1 tbsp oil</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Cook noodles as per packet. Drain and set aside.</li><li>Heat oil in a large pan or wok over high heat. Add pork mince and break up well. Cook 6–8 mins until browned.</li><li>Add garlic powder and stir through.</li><li>Add frozen veg straight from the bag. Cook 3 mins.</li><li>Add noodles, soy sauce, oyster sauce and sesame oil. Toss everything together well over high heat for 2 mins.</li><li>Serve immediately.</li></ol></div></div><div class="recipe-tip">Really break up the mince while it cooks — you want fine crumbles, not clumps. High heat gives you a bit of char on the pork which is where the flavour comes from. Save a good serve for Tuesday's thermos.</div></div></div>
+  </div>
 
   <div class="recipe-day-label">Tuesday</div>
   <div class="recipe-cards">
-    <input type="checkbox" class="recipe-toggle" id="r1">
-    <div class="recipe-card"><label class="recipe-header-label" for="r1"><div class="recipe-title-wrap"><div class="recipe-title">Mini Cheese Omelette</div><div class="recipe-meta">Breakfast · 8 mins</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>6 eggs</li><li>3 tbsp milk</li><li>¾ cup grated cheese</li><li>Knob of butter</li><li>Salt &amp; pepper</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Whisk eggs, milk, salt and pepper.</li><li>Melt butter in a non-stick pan over medium heat.</li><li>Pour in eggs and scatter cheese over the top.</li><li>When edges start to set, fold in half and slide onto plate.</li><li>Cut into smaller pieces for the kids.</li></ol></div></div><div class="recipe-tip">Make individual small ones if the kids prefer — easier for little hands to eat and they think it's fun.</div></div></div>
-
     <input type="checkbox" class="recipe-toggle" id="r2">
-    <div class="recipe-card"><label class="recipe-header-label" for="r2"><div class="recipe-title-wrap"><div class="recipe-title">Tuna &amp; Penne with Cheese</div><div class="recipe-meta">Lunch · 15 mins · prep night before 🌡️</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>400g penne pasta</li><li>2 × 185g tins tuna, drained</li><li>2 tbsp butter</li><li>½ cup grated cheese</li><li>Salt &amp; pepper</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Cook penne as per packet. Drain, reserving a splash of pasta water.</li><li>Return to pot. Add butter and toss until melted.</li><li>Stir through tuna gently, breaking into chunks.</li><li>Add cheese and toss. Splash pasta water if dry. Season.</li><li>Cool and refrigerate. Reheat and pack into pre-heated thermos in the morning.</li></ol></div></div><div class="recipe-tip">Pre-heat thermos with boiling water for 5 mins first so it stays warm until school lunch.</div></div></div>
-
-    <input type="checkbox" class="recipe-toggle" id="r3">
-    <div class="recipe-card"><label class="recipe-header-label" for="r3"><div class="recipe-title-wrap"><div class="recipe-title">Garlic Butter Basa with Mash &amp; Veg</div><div class="recipe-meta">Dinner · 20 mins · pan fry</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>534g basa fillets</li><li>3 tbsp butter</li><li>2 tsp garlic powder</li><li>Juice of ½ lemon</li><li>Salt &amp; pepper</li><li>Frozen mash (as per packet)</li><li>2 cups frozen mixed veg</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Pat basa fillets dry. Season with salt, pepper and garlic powder.</li><li>Heat butter in a pan over medium-high heat until foaming.</li><li>Cook basa 3–4 mins each side until golden. Squeeze lemon over at the end.</li><li>Heat frozen mash and microwave veg as per packets.</li><li>Serve fish over mash with veg on the side. Spoon pan butter over.</li></ol></div></div><div class="recipe-tip">Don't move the fish while it cooks — let it get a golden crust and it'll release naturally when it's ready to flip.</div></div></div>
+    <div class="recipe-card"><label class="recipe-header-label" for="r2"><div class="recipe-title-wrap"><div class="recipe-title">SC Honey Garlic Pork Mince over Mash</div><div class="recipe-meta">Dinner · 15 mins prep + 4–6 hrs slow cooker</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>500g pork mince</li><li>4 tbsp soy sauce</li><li>3 tbsp honey</li><li>2 tsp garlic powder</li><li>1 tbsp tomato sauce</li><li>1 tbsp cornflour mixed with 2 tbsp cold water</li><li>Frozen mash (as per packet)</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Brown pork mince in a pan for 5 mins, breaking it up well. Drain any excess fat.</li><li>Transfer to slow cooker. Add soy sauce, honey, garlic powder and tomato sauce. Stir well.</li><li>Cook on LOW 4–6 hrs or HIGH 2–3 hrs.</li><li>30 mins before serving, stir in the cornflour slurry to thicken the sauce.</li><li>Heat frozen mash as per packet. Spoon pork over mash to serve.</li></ol></div></div><div class="recipe-tip">Browning the mince first gives much better depth of flavour than dumping it in raw. Don't skip it! The cornflour slurry at the end makes the sauce glossy and thick — restaurant-style.</div></div></div>
   </div>
 
   <div class="recipe-day-label">Wednesday</div>
   <div class="recipe-cards">
+    <input type="checkbox" class="recipe-toggle" id="r3">
+    <div class="recipe-card"><label class="recipe-header-label" for="r3"><div class="recipe-title-wrap"><div class="recipe-title">French Toast with Cinnamon Sugar</div><div class="recipe-meta">Breakfast · 12 mins</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>6 thick slices bread</li><li>3 eggs</li><li>½ cup milk</li><li>1 tsp vanilla (optional)</li><li>2 tbsp sugar + 1 tsp cinnamon, mixed</li><li>Butter for frying</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Whisk eggs, milk and vanilla in a shallow bowl.</li><li>Dip each bread slice, soaking 10 seconds each side.</li><li>Fry in butter over medium heat, 2–3 mins each side until golden.</li><li>Sprinkle cinnamon sugar over immediately while hot.</li></ol></div></div><div class="recipe-tip">The sugar caramelises as it hits the hot bread — do it straight from the pan. A little extra butter on top as it melts is chef's kiss.</div></div></div>
+
     <input type="checkbox" class="recipe-toggle" id="r4">
-    <div class="recipe-card"><label class="recipe-header-label" for="r4"><div class="recipe-title-wrap"><div class="recipe-title">French Toast with Cinnamon Sugar</div><div class="recipe-meta">Breakfast · 12 mins</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>6 thick slices bread</li><li>3 eggs</li><li>½ cup milk</li><li>1 tsp vanilla extract (optional)</li><li>2 tbsp sugar + 1 tsp cinnamon, mixed</li><li>Butter for frying</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Whisk eggs, milk and vanilla together in a shallow bowl.</li><li>Dip each bread slice in the egg mixture, soaking 10 seconds each side.</li><li>Melt butter in a pan over medium heat. Cook bread 2–3 mins each side until golden.</li><li>Sprinkle cinnamon sugar over immediately while hot.</li><li>Serve with a little extra butter or maple syrup.</li></ol></div></div><div class="recipe-tip">The egg and milk soak INTO the bread — kids who won't touch fruit absolutely love this. The sugar caramelises as it hits the hot bread.</div></div></div>
-
-    <input type="checkbox" class="recipe-toggle" id="r5">
-    <div class="recipe-card"><label class="recipe-header-label" for="r5"><div class="recipe-title-wrap"><div class="recipe-title">Leftover Basa &amp; Buttered Noodles</div><div class="recipe-meta">Lunch · 10 mins · prep night before 🌡️</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>Leftover basa fillets, flaked</li><li>200g hokkien or egg noodles</li><li>1 tbsp butter</li><li>1 tbsp soy sauce</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Cook noodles as per packet. Drain.</li><li>Toss hot noodles with butter and soy sauce.</li><li>Gently fold through flaked leftover basa.</li><li>Cool, store, reheat and pack into pre-heated thermos in the morning.</li></ol></div></div></div></div>
-
-    <input type="checkbox" class="recipe-toggle" id="r6">
-    <div class="recipe-card"><label class="recipe-header-label" for="r6"><div class="recipe-title-wrap"><div class="recipe-title">Creamy Garlic Marinara Pasta</div><div class="recipe-meta">Dinner · 25 mins</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>400g marinara mix</li><li>400g penne pasta</li><li>400g tin diced tomatoes</li><li>200ml cream</li><li>2 tsp garlic powder</li><li>1 tbsp butter</li><li>Salt &amp; pepper</li><li>Grated cheese to serve</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Cook pasta as per packet. Drain.</li><li>Heat butter in a large pan over medium-high. Add marinara mix, cook 3–4 mins until just cooked through.</li><li>Add garlic powder, tinned tomatoes and cream. Stir and simmer 5 mins.</li><li>Season with salt and pepper.</li><li>Toss through cooked pasta. Serve with grated cheese.</li></ol></div></div><div class="recipe-tip">Don't overcook the seafood — 3–4 mins max or it gets rubbery. Add the cream on low heat and don't let it boil hard.</div></div></div>
+    <div class="recipe-card"><label class="recipe-header-label" for="r4"><div class="recipe-title-wrap"><div class="recipe-title">Garlic Butter Lamb Steaks, Mash &amp; Mixed Veg</div><div class="recipe-meta">Dinner · 20 mins · pan fry</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>Half the lamb steaks (save half for Saturday)</li><li>3 tbsp butter</li><li>2 tsp garlic powder</li><li>Salt &amp; pepper</li><li>Frozen mash (as per packet)</li><li>2 cups frozen mixed veg</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Season lamb with salt, pepper and garlic powder.</li><li>Heat butter in a pan over high heat until foaming.</li><li>Cook lamb 3–4 mins each side. Rest 3–4 mins off heat — cover with foil.</li><li>Heat frozen mash and microwave veg as per packets.</li><li>Slice lamb and serve over mash. Pour pan butter juices over everything.</li></ol></div></div><div class="recipe-tip">Save the remaining lamb for Saturday's soy honey version. Two totally different flavour profiles from the same protein — one buttery and rich, one sweet and sticky.</div></div></div>
   </div>
 
   <div class="recipe-day-label">Thursday — Easy Night ⚡</div>
   <div class="recipe-cards">
-    <input type="checkbox" class="recipe-toggle" id="r7">
-    <div class="recipe-card"><label class="recipe-header-label" for="r7"><div class="recipe-title-wrap"><div class="recipe-title">Tortellini in Creamy Tomato Sauce</div><div class="recipe-meta">Dinner · 15 mins · one pot</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>Full pack tortellini</li><li>400g tin diced tomatoes</li><li>150ml cream</li><li>1 tsp garlic powder</li><li>½ tsp mixed herbs</li><li>Salt &amp; pepper</li><li>Grated cheese to serve</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Cook tortellini as per packet — usually 3–4 mins. Drain.</li><li>In the same pot, combine tinned tomatoes, cream, garlic and herbs over medium heat. Stir 3–4 mins.</li><li>Add tortellini back in and toss gently to coat.</li><li>Season and serve with grated cheese on top.</li></ol></div></div><div class="recipe-tip">One pot, 15 mins, barely any dishes. The easiest dinner of the week — perfect for a night when nobody wants to cook.</div></div></div>
+    <input type="checkbox" class="recipe-toggle" id="r5">
+    <div class="recipe-card"><label class="recipe-header-label" for="r5"><div class="recipe-title-wrap"><div class="recipe-title">SC Pork Mince Bolognese over Penne</div><div class="recipe-meta">Dinner · 15 mins prep + 4–6 hrs slow cooker</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>500g pork mince</li><li>400g tin diced tomatoes</li><li>2 tbsp tomato paste</li><li>1 tsp garlic powder</li><li>1 tsp mixed Italian herbs</li><li>Salt &amp; pepper</li><li>400g penne pasta</li><li>Grated cheese to serve</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Brown pork mince in a pan 5 mins. Drain fat.</li><li>Transfer to slow cooker. Add tinned tomatoes, tomato paste, garlic powder and herbs. Stir.</li><li>Cook LOW 4–6 hrs or HIGH 2–3 hrs.</li><li>Cook penne as per packet when almost ready. Drain.</li><li>Serve bolognese over penne with grated cheese.</li></ol></div></div><div class="recipe-tip">Pork mince makes a wonderfully rich bolognese — often better than beef because of the higher fat content. Save a big serve for Friday's thermos lunch. It reheats beautifully.</div></div></div>
   </div>
 
   <div class="recipe-day-label">Friday</div>
   <div class="recipe-cards">
-    <input type="checkbox" class="recipe-toggle" id="r8">
-    <div class="recipe-card"><label class="recipe-header-label" for="r8"><div class="recipe-title-wrap"><div class="recipe-title">Boiled Eggs &amp; Toast Soldiers</div><div class="recipe-meta">Breakfast · 10 mins</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>4–6 eggs</li><li>4 slices bread, toasted</li><li>Butter · salt</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Bring a saucepan of water to the boil.</li><li>Lower eggs in with a spoon. Boil 6 mins for runny yolk, 8 mins for firm.</li><li>Toast bread, butter it, cut into thin finger-width soldiers.</li><li>Serve eggs in cups with soldiers on the side for dipping.</li></ol></div></div><div class="recipe-tip">Set a timer so you don't forget about the eggs during the morning chaos! Kids love dipping — it makes breakfast feel like a game.</div></div></div>
-
-    <input type="checkbox" class="recipe-toggle" id="r9">
-    <div class="recipe-card"><label class="recipe-header-label" for="r9"><div class="recipe-title-wrap"><div class="recipe-title">Pan Seared Scotch Steaks with Mash &amp; Veg</div><div class="recipe-meta">Dinner · 20 mins</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>2 scotch steaks</li><li>2 tbsp butter</li><li>1 tsp garlic powder</li><li>Salt &amp; pepper</li><li>Frozen mash (as per packet)</li><li>2 cups frozen mixed veg</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Take steaks out of fridge 10 mins before cooking. Pat dry and season well with salt, pepper and garlic powder.</li><li>Heat a pan over high heat until very hot. Add butter.</li><li>Cook steaks 3–4 mins each side for medium. Rest on a board for 5 mins — don't skip this!</li><li>While steak rests, heat frozen mash and microwave veg as per packets.</li><li>Slice steak and serve over mash with veg on the side.</li></ol></div></div><div class="recipe-tip">Resting the steak is the secret to juicy meat. Cover loosely with foil while you plate everything else up. The juices redistribute and every slice will be tender.</div></div></div>
+    <input type="checkbox" class="recipe-toggle" id="r6">
+    <div class="recipe-card"><label class="recipe-header-label" for="r6"><div class="recipe-title-wrap"><div class="recipe-title">Burger Night</div><div class="recipe-meta">Dinner · 20 mins · fun one!</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>Frozen burger patties (all of them)</li><li>Cheese slices</li><li>Burger buns, toasted in butter</li><li>Lettuce, sauce &amp; toppings of choice</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Heat a pan over high heat. Cook patties from frozen — about 5–6 mins each side until cooked through.</li><li>Add cheese slice right after flipping so it melts while the second side cooks.</li><li>Toast buns in a separate pan with butter.</li><li>Assemble and serve immediately.</li></ol></div></div><div class="recipe-tip">Cooking from frozen is absolutely fine — just make sure the inside is cooked through. Don't press the patties down while cooking or you squeeze all the juices out.</div></div></div>
   </div>
 
   <div class="recipe-day-label">Saturday</div>
   <div class="recipe-cards">
-    <input type="checkbox" class="recipe-toggle" id="r10">
-    <div class="recipe-card"><label class="recipe-header-label" for="r10"><div class="recipe-title-wrap"><div class="recipe-title">Pikelet Stack with Butter &amp; Syrup</div><div class="recipe-meta">Breakfast · 15 mins</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>1 packet pikelet mix</li><li>Butter for frying</li><li>Butter &amp; maple syrup to serve</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Make batter as per packet instructions.</li><li>Heat a non-stick pan over medium with a small knob of butter.</li><li>Drop spoonfuls of batter — about 2 tbsp each. Cook until bubbles appear on top, then flip.</li><li>Cook 1 more minute until golden underneath.</li><li>Stack on plates and serve with butter and maple syrup.</li></ol></div></div><div class="recipe-tip">Keep finished pikelets warm in the oven on lowest temp while you cook the rest. Kids love doing the bubble-watching and flipping!</div></div></div>
+    <input type="checkbox" class="recipe-toggle" id="r7">
+    <div class="recipe-card"><label class="recipe-header-label" for="r7"><div class="recipe-title-wrap"><div class="recipe-title">Pancake Stack with Butter &amp; Maple Syrup</div><div class="recipe-meta">Breakfast · 20 mins</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>1 packet pancake mix (or 1½ cups SR flour, 2 eggs, 1 cup milk, 1 tbsp sugar)</li><li>Butter for frying</li><li>Butter &amp; maple syrup to serve</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Make batter as per packet, or whisk SR flour, eggs, milk and sugar until smooth with no lumps.</li><li>Rest batter 5 mins — this makes fluffier pancakes.</li><li>Heat pan over medium heat with a small knob of butter.</li><li>Pour in about ¼ cup of batter per pancake. Cook until bubbles form and edges look set — about 2 mins. Flip and cook 1 min more.</li><li>Keep warm in oven at lowest temp while cooking the rest.</li><li>Stack high and serve with butter and maple syrup.</li></ol></div></div><div class="recipe-tip">Resting the batter is the secret to thick fluffy pancakes. Don't overmix — a few lumps are fine. Medium heat, not high, so they cook through without burning.</div></div></div>
 
-    <input type="checkbox" class="recipe-toggle" id="r11">
-    <div class="recipe-card"><label class="recipe-header-label" for="r11"><div class="recipe-title-wrap"><div class="recipe-title">Leftover Steak &amp; Soy Noodles</div><div class="recipe-meta">Lunch · 10 mins · prep night before 🌡️</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>Leftover scotch steak, sliced thin</li><li>200g hokkien or egg noodles</li><li>1 tbsp butter</li><li>2 tbsp soy sauce</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Cook noodles as per packet. Drain.</li><li>Toss hot noodles with butter and soy sauce.</li><li>Stir through sliced leftover steak.</li><li>Cool, pack into containers. Reheat and pour into pre-heated thermos.</li></ol></div></div></div></div>
-
-    <input type="checkbox" class="recipe-toggle" id="r12">
-    <div class="recipe-card"><label class="recipe-header-label" for="r12"><div class="recipe-title-wrap"><div class="recipe-title">Soy Honey Garlic Lamb Steaks with Mash</div><div class="recipe-meta">Dinner · 25 mins · pan fry</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>540g lamb steaks</li><li>3 tbsp soy sauce</li><li>2 tbsp honey</li><li>1 tsp garlic powder</li><li>1 tbsp oil</li><li>Frozen mash (as per packet)</li><li>1 cup frozen green beans</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Mix soy, honey and garlic powder. Coat lamb steaks and marinate 10+ mins.</li><li>Heat oil in a pan over medium-high heat.</li><li>Cook lamb 3–4 mins each side, spooning marinade over as it cooks. Rest 3 mins.</li><li>Heat frozen mash and microwave green beans as per packets.</li><li>Slice lamb and serve over mash with beans. Pour pan juices over.</li></ol></div></div><div class="recipe-tip">The honey caramelises fast — watch the heat once the marinade goes in so it doesn't burn. Medium-high is plenty once it's glazing.</div></div></div>
+    <input type="checkbox" class="recipe-toggle" id="r8">
+    <div class="recipe-card"><label class="recipe-header-label" for="r8"><div class="recipe-title-wrap"><div class="recipe-title">Soy Honey Lamb Steaks, Mash &amp; Mixed Veg</div><div class="recipe-meta">Dinner · 25 mins · pan fry</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>Remaining lamb steaks</li><li>3 tbsp soy sauce</li><li>2 tbsp honey</li><li>1 tsp garlic powder</li><li>1 tbsp oil</li><li>Frozen mash (as per packet)</li><li>2 cups frozen mixed veg</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Mix soy, honey and garlic powder. Coat lamb steaks and marinate 10+ mins.</li><li>Heat oil in a pan over medium-high. Cook lamb 3–4 mins each side, spooning marinade over as it cooks.</li><li>Rest 3 mins. Heat mash and microwave veg as per packets.</li><li>Slice lamb, serve over mash with veg. Pour pan juices over.</li></ol></div></div><div class="recipe-tip">Watch the heat once the honey hits the pan — it caramelises fast and can burn. Medium-high is enough. The dark caramelised bits on the pan make the best sauce — scrape them up with a little splash of water.</div></div></div>
   </div>
 
   <div class="recipe-day-label">Sunday</div>
   <div class="recipe-cards">
-    <input type="checkbox" class="recipe-toggle" id="r13">
-    <div class="recipe-card"><label class="recipe-header-label" for="r13"><div class="recipe-title-wrap"><div class="recipe-title">Crispy Tuna Patties with Veg</div><div class="recipe-meta">Lunch · 20 mins</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>2 × 185g tins tuna, well drained</li><li>1 cup frozen mash, thawed</li><li>1 egg</li><li>½ cup breadcrumbs</li><li>1 tsp garlic powder</li><li>Salt &amp; pepper · oil for frying</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Microwave frozen mash 2 mins to thaw. Let cool slightly.</li><li>Mix drained tuna, mash, egg, garlic powder, salt and pepper together.</li><li>Shape into small patties. Press breadcrumbs onto both sides.</li><li>Heat oil in a pan over medium heat. Cook 3–4 mins each side until golden and crispy.</li><li>Serve with frozen mixed veg on the side.</li></ol></div></div><div class="recipe-tip">Drain the tuna really well — press with the back of a spoon. If the mixture is too sticky, refrigerate 15 mins before shaping. Kids almost always love these.</div></div></div>
+    <input type="checkbox" class="recipe-toggle" id="r9">
+    <div class="recipe-card"><label class="recipe-header-label" for="r9"><div class="recipe-title-wrap"><div class="recipe-title">Puff Pastry Cinnamon Scrolls — Kids Help!</div><div class="recipe-meta">Breakfast · 30 mins (incl. baking at 160°C)</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>2 sheets frozen puff pastry, thawed</li><li>3 tbsp softened butter</li><li>3 tbsp sugar</li><li>1½ tsp cinnamon</li><li>Optional icing: ½ cup icing sugar + 1 tbsp milk</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Preheat oven to 160°C. Mix sugar and cinnamon together in a small bowl.</li><li>Lay pastry sheets on a floured bench. Kids spread softened butter all over with a spoon or butter knife.</li><li>Kids sprinkle the cinnamon sugar all over the butter — as much as they like!</li><li>Roll up tightly from one long edge into a log. Press the seam to seal.</li><li>Cut into 6–8 rounds per sheet. Place flat on a lined baking tray.</li><li>Bake at 160°C for 22–26 mins until puffed and golden.</li><li>Cool slightly. Drizzle icing over if using.</li></ol></div></div><div class="recipe-tip">At 160°C they take a little longer than usual but puff pastry is very forgiving. The kids can do almost all of this — spreading, sprinkling, rolling and pressing. Let them go wild with the cinnamon sugar!</div></div></div>
 
-    <input type="checkbox" class="recipe-toggle" id="r14">
-    <div class="recipe-card"><label class="recipe-header-label" for="r14"><div class="recipe-title-wrap"><div class="recipe-title">Smash Burger Night</div><div class="recipe-meta">Dinner · 20 mins · the fun one 🎉</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>4 burger patties</li><li>Remaining beef mince, shaped into extra patties</li><li>Cheese slices</li><li>Burger buns, toasted in butter</li><li>Sauce &amp; toppings of choice</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Shape any remaining mince into rough balls — no need to be perfect.</li><li>Heat a pan over the HIGHEST heat possible.</li><li>Add mince ball and immediately smash flat hard with a spatula.</li><li>Cook 2–3 mins until edges are very crispy. Flip and add cheese slice immediately.</li><li>Cook 1 more min. Toast buns in butter. Assemble and serve hot.</li></ol></div></div><div class="recipe-tip">A very hot pan and smashing immediately = crispy caramelised edges. That's the whole secret. Don't press it down again after the first smash or you'll squeeze the juices out.</div></div></div>
+    <input type="checkbox" class="recipe-toggle" id="r10">
+    <div class="recipe-card"><label class="recipe-header-label" for="r10"><div class="recipe-title-wrap"><div class="recipe-title">Tuna &amp; Penne with Cheese</div><div class="recipe-meta">Lunch · 15 mins</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>400g penne</li><li>2 × 185g tins tuna, well drained</li><li>2 tbsp butter</li><li>½ cup grated cheese</li><li>Salt &amp; pepper</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Cook penne as per packet. Drain, reserving a splash of pasta water.</li><li>Return to pot over low heat. Add butter and toss until melted.</li><li>Stir through tuna gently, keeping some chunks.</li><li>Add cheese and toss. Splash pasta water if it looks dry. Season and serve.</li></ol></div></div></div></div>
+
+    <input type="checkbox" class="recipe-toggle" id="r11">
+    <div class="recipe-card"><label class="recipe-header-label" for="r11"><div class="recipe-title-wrap"><div class="recipe-title">Garlic Butter Basa, Mash &amp; Mixed Veg</div><div class="recipe-meta">Dinner · 20 mins · pan fry</div></div><span class="recipe-chevron">⌄</span></label><div class="recipe-body"><div class="recipe-cols"><div><div class="recipe-section-title">Ingredients</div><ul class="ingredient-list"><li>Basa fillets (full pack)</li><li>3 tbsp butter</li><li>2 tsp garlic powder</li><li>Juice of ½ lemon</li><li>Salt &amp; pepper</li><li>Frozen mash (as per packet)</li><li>2 cups frozen mixed veg</li></ul></div><div><div class="recipe-section-title">Method</div><ol class="steps-list"><li>Pat basa dry. Season with salt, pepper and garlic powder.</li><li>Heat butter in a pan over medium-high until foaming.</li><li>Cook basa 3–4 mins each side until golden. Squeeze lemon over at the end.</li><li>Heat mash and microwave veg as per packets.</li><li>Serve fish over mash, spoon pan butter over everything.</li></ol></div></div><div class="recipe-tip">Don't move the fish while it cooks — let it get a golden crust. It'll release from the pan naturally when it's ready to flip. Basa is a very forgiving fish that kids tend to love.</div></div></div>
   </div>
 </div>
 
 <!-- ═══ SNACKS ═══ -->
 <div class="section section-snacks">
-  <div class="snack-intro">No raw food, no bread-based snacks, no muesli bars. All cooked, warm, or packaged. High protein and low calorie to suit Monjaro.</div>
+  <div class="snack-intro">No raw food, no muesli bars, no smoothies. High protein and low calorie to suit Monjaro. All warm, cooked or easy-grab options.</div>
   <div class="snack-section-label">Warm &amp; cooked</div>
   <div class="snack-grid">
-    <div class="snack-card"><div class="snack-name">Hard-boiled eggs</div><div class="snack-desc">Batch cook at the start of the week — grab from the fridge anytime</div><div class="snack-cal">~70 cal each · excellent protein</div></div>
-    <div class="snack-card"><div class="snack-name">Warm baked beans</div><div class="snack-desc">Half a tin microwaved — warm, filling, no toast needed</div><div class="snack-cal">~100 cal · already on your list</div></div>
-    <div class="snack-card"><div class="snack-name">Warm Milo or hot choc</div><div class="snack-desc">Skim or regular milk — great on low appetite or nausea days</div><div class="snack-cal">~100–130 cal</div></div>
-    <div class="snack-card"><div class="snack-name">Microwaved frozen peas</div><div class="snack-desc">Small cup with a pinch of salt — already in your freezer</div><div class="snack-cal">~60 cal</div></div>
+    <div class="snack-card"><div class="snack-name">Hard-boiled eggs</div><div class="snack-desc">Batch cook at the start of the week — grab from the fridge anytime. Peel and store in a container.</div><div class="snack-cal">~70 cal each · excellent protein</div></div>
+    <div class="snack-card"><div class="snack-name">Warm baked beans</div><div class="snack-desc">Half a tin microwaved on their own — warm, filling, no toast needed</div><div class="snack-cal">~100 cal · on your shopping list</div></div>
+    <div class="snack-card"><div class="snack-name">Microwaved frozen peas</div><div class="snack-desc">Small cup from the freezer with a pinch of salt — ready in 2 mins</div><div class="snack-cal">~60 cal</div></div>
+    <div class="snack-card"><div class="snack-name">Microwave broccoli</div><div class="snack-desc">Frozen broccoli florets microwaved 3 mins — sprinkle of salt or a tiny bit of butter</div><div class="snack-cal">~35 cal per cup · very filling</div></div>
   </div>
   <div class="snack-section-label">Fridge &amp; packaged</div>
   <div class="snack-grid">
-    <div class="snack-card"><div class="snack-name">Yogurt pot</div><div class="snack-desc">Ski, Jalna or Chobani smooth — grab and go</div><div class="snack-cal">~90–120 cal · good protein</div></div>
-    <div class="snack-card"><div class="snack-name">Cheese &amp; rice crackers</div><div class="snack-desc">Small serve of block cheese with plain rice crackers</div><div class="snack-cal">~120–150 cal</div></div>
-    <div class="snack-card"><div class="snack-name">Small handful of nuts</div><div class="snack-desc">Almonds or walnuts — keep to ~15g on Monjaro</div><div class="snack-cal">~90 cal for 15g</div></div>
-    <div class="snack-card"><div class="snack-name">Bega cheese sticks</div><div class="snack-desc">Individually wrapped from Woolies — easy grab, kids love them too</div><div class="snack-cal">~70–80 cal each</div></div>
+    <div class="snack-card"><div class="snack-name">Cashews (small handful)</div><div class="snack-desc">About 15–18 cashews — creamy and filling. Pre-portion into a small container so you don't overdo it on Monjaro</div><div class="snack-cal">~90–100 cal per 15g</div></div>
+    <div class="snack-card"><div class="snack-name">Tinned fruit in juice</div><div class="snack-desc">Diced peaches or pears in natural juice — a small bowl, no added sugar. Good for the kids too</div><div class="snack-cal">~50–60 cal per serve</div></div>
   </div>
 </div>
 
 <!-- ═══ SHOPPING ═══ -->
 <div class="section section-shopping">
-  <div class="shop-note"><strong>Main shop: Woolworths</strong> — Cnr Vivian &amp; Sweaney St, Inverell · (02) 6722 4100<br><strong>Backup: Coles</strong> — 12 Byron St, Inverell · (02) 6722 3811<br>Tap any item to check it off as you shop. Items marked ✅ are already at home.</div>
+  <div class="shop-note"><strong>Main shop: Woolworths</strong> — Cnr Vivian &amp; Sweaney St, Inverell · (02) 6722 4100<br><strong>Backup: Coles</strong> — 12 Byron St, Inverell · (02) 6722 3811<br>Tap any item to mark it off as you shop. Items marked ✅ are already at home.</div>
   <div class="shop-grid">
 
     <div class="shop-category"><div class="shop-cat-header">Already have ✅</div><div class="shop-items">
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Basa fillets 534g ✅</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Lamb steaks 540g ✅</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Scotch steaks × 2 ✅</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Burger patties × 4 ✅</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Beef mince (remaining) ✅</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Marinara mix 400g ✅</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Tinned tuna 800g ✅</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Tortellini ✅</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Pork mince 1.5kg ✅</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Lamb steaks ✅</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Frozen burger patties ✅</span></label>
+    </div></div>
+
+    <div class="shop-category"><div class="shop-cat-header">Meat &amp; fish</div><div class="shop-items">
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Basa fillets (fresh or frozen pack)</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Shaved ham (small pack — Saturday toastie)</span></label>
     </div></div>
 
     <div class="shop-category"><div class="shop-cat-header">Pantry &amp; dry goods</div><div class="shop-items">
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Hokkien noodles (2 packs)</span></label>
       <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Penne pasta 500g</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Hokkien or egg noodles (packet)</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Tinned diced tomatoes × 2</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Tinned diced tomatoes × 1</span></label>
       <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Tinned baked beans × 2</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Pikelet mix (packet)</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Breadcrumbs (small pack)</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Maple syrup (for pikelets)</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Tinned tuna in spring water × 2</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Tinned fruit in juice — peaches or pears × 2</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Tomato paste (small tin or tube)</span></label>
       <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Soy sauce (if low)</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Oyster sauce (small bottle)</span></label>
       <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Honey (if low)</span></label>
       <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Garlic powder (if low)</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Rice crackers (snacks)</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Plain muesli (snacks)</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Cornflour (small box)</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Mixed Italian herbs (if low)</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Maple syrup</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Icing sugar (small bag — optional for scrolls)</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Cashews (small bag)</span></label>
     </div></div>
 
     <div class="shop-category"><div class="shop-cat-header">Fridge &amp; dairy</div><div class="shop-items">
       <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Eggs 12-pack</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Cream 200ml</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Butter 250g (if low)</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Milk 2–3L</span></label>
       <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Block cheese 500g</span></label>
       <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Cheese slices (for burgers)</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Butter 250g (if low)</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Milk 3L</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Yogurt — Ski / Jalna multipack</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Bega cheese sticks</span></label>
     </div></div>
 
     <div class="shop-category"><div class="shop-cat-header">Frozen</div><div class="shop-items">
       <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Frozen mash × 2 packs</span></label>
       <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Frozen mixed veg (large bag)</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Frozen green beans</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Frozen broccoli florets (snacks + veg)</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Puff pastry sheets (2 pack — freezer section)</span></label>
     </div></div>
 
     <div class="shop-category"><div class="shop-cat-header">Bread &amp; bakery</div><div class="shop-items">
       <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Multigrain bread × 2 (freeze one)</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Burger buns 4–6 pack</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Burger buns (4–6 pack)</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Pancake mix (packet)</span></label>
     </div></div>
 
     <div class="shop-category"><div class="shop-cat-header">Drinks &amp; other</div><div class="shop-items">
       <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Up &amp; Go (week's supply)</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Milo or drinking chocolate</span></label>
       <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Lemon × 1 (for basa)</span></label>
-      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Mixed nuts (snacks)</span></label>
       <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Burger sauce &amp; toppings</span></label>
+      <label class="shop-item"><input type="checkbox"><div class="shop-cb"></div><span class="shop-text">Tomato sauce (if low)</span></label>
     </div></div>
 
   </div>
@@ -882,12 +1296,12 @@
 <!-- ═══ TIPS ═══ -->
 <div class="section section-tips">
   <div class="tips-grid">
-    <div class="tip-card"><div class="tip-title">Marinara mix — use it Wednesday!</div><div class="tip-body">Marinara mix is the most perishable protein this week — that's why it's Wednesday dinner. If plans change, pop it in the freezer before it gets close to the use-by date. Defrost in the fridge overnight before cooking.</div></div>
-    <div class="tip-card"><div class="tip-title">Monjaro &amp; bigger proteins</div><div class="tip-body">This week has some bigger proteins — steak, lamb, fish. On Monjaro your portion will be smaller naturally. Protein first before the mash. Save every leftover — this week especially, they turn into the next day's thermos lunch with almost no effort.</div></div>
-    <div class="tip-card"><div class="tip-title">Smash burger secrets</div><div class="tip-body">The pan must be genuinely very hot — this is what creates those crispy caramelised edges. Don't crowd the pan; cook in batches. Cheese goes on the moment you flip so it melts perfectly. Don't press after the first smash or you'll squeeze all the juices out.</div></div>
-    <div class="tip-card"><div class="tip-title">Resting your steaks &amp; lamb</div><div class="tip-body">Both the scotch steaks (Friday) and lamb steaks (Saturday) need to rest 3–5 mins off the heat before slicing. Cover loosely with foil while you plate the mash and veg. This is what makes them juicy rather than dry every time.</div></div>
-    <div class="tip-card"><div class="tip-title">Tuna patties tip</div><div class="tip-body">Drain the tuna really well — press with the back of a spoon in the strainer. If the mixture is too sticky to shape, refrigerate for 15–20 mins first. Make them small and round so they cook through quickly and the kids can eat them easily.</div></div>
-    <div class="tip-card"><div class="tip-title">Thermos lunches this week</div><div class="tip-body">Pre-heat the thermos every morning — fill with boiling water, leave 5 mins, pour out, fill with piping hot food. The tuna penne, basa noodles, marinara pasta, tortellini and steak noodles all hold heat beautifully. All prep the night before takes under 10 mins.</div></div>
+    <div class="tip-card"><div class="tip-title">Splitting the pork mince across the week</div><div class="tip-body">You have 1.5kg pork mince for 3 meals — roughly 500g each. Monday stir fry (500g), Tuesday slow cooker honey garlic (500g), Thursday slow cooker bolognese (500g). Weigh them out roughly on Monday when you get home from shopping so you're not guessing later.</div></div>
+    <div class="tip-card"><div class="tip-title">Splitting the lamb steaks</div><div class="tip-body">Use half the lamb Wednesday (garlic butter, simple and fast) and save the rest for Saturday (soy honey marinade, stickier and richer). Two completely different dinners from the one pack. If you're not sure how many steaks you have, count them and split evenly.</div></div>
+    <div class="tip-card"><div class="tip-title">Slow cooker tip — both days</div><div class="tip-body">Both Tuesday and Thursday use the slow cooker. For both, brown the pork mince in a pan first — this one step makes an enormous difference to the depth of flavour. Takes 5 extra mins but the result is completely different to dumping it in raw. Set it in the morning and forget about it.</div></div>
+    <div class="tip-card"><div class="tip-title">Sunday cinnamon scrolls with the kids</div><div class="tip-body">The kids can do basically everything — spread the butter, dump the cinnamon sugar on (let them go wild), roll it up with your help, and press the seam. Cut the rolls yourself as the knife is the only dangerous part. At 160°C they take about 22–26 mins — check at 20 mins. They should be golden and puffed.</div></div>
+    <div class="tip-card"><div class="tip-title">Thursday lunch — rice for the kids!</div><div class="tip-body">This is the week you try the kids on rice again. Keep the serve small and pair it with the lamb which has good flavour — plain rice on its own is harder to get kids interested in. A tiny drizzle of soy sauce helps a lot. Don't make a big deal of it either way.</div></div>
+    <div class="tip-card"><div class="tip-title">Thermos lunches this week</div><div class="tip-body">Pre-heat the thermos every morning — boiling water in for 5 mins, pour out, fill with piping hot food. Tuesday pork noodles, Wednesday honey garlic pork on noodles, Thursday lamb &amp; rice, Friday bolognese penne — all hold heat beautifully. Prep the night before takes under 10 mins each time.</div></div>
   </div>
 </div>
 
